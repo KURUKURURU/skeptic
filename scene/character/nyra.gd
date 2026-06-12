@@ -27,8 +27,8 @@ func _physics_process(delta):
 		velocity = (direction * speed)
 		move_and_slide()
 	
-	if Input.is_action_pressed("right") || Input.is_action_pressed("left") or Input.is_action_pressed("up") || Input.is_action_pressed("down") :
-		#if animation.animation == "wal":
-		animation.play("walk")
-	else:
-		animation.play("idle")
+	#if Input.is_action_pressed("right") || Input.is_action_pressed("left") or Input.is_action_pressed("up") || Input.is_action_pressed("down") :
+		##if animation.animation == "wal":
+		#animation.play("walk")
+	#else:
+		#animation.play("idle")

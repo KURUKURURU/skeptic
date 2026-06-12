@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://cq8f61txgqc3s"]
+
+[ext_resource type="Texture2D" uid="uid://cc315sjfah1jq" path="res://img/9slice.png" id="1_ccmy2"]
+[ext_resource type="FontFile" uid="uid://c86d27kc7crf3" path="res://tff/monogram/ttf/monogram-extended-italic.ttf" id="2_18j7c"]
+[ext_resource type="Texture2D" uid="uid://j66k34row0x8" path="res://img/face test.png" id="2_er8op"]
+[ext_resource type="FontFile" uid="uid://cqqe2he1ftv8i" path="res://tff/monogram/ttf/monogram-extended.ttf" id="4_q36t1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q36t1"]
+atlas = ExtResource("2_er8op")
+region = Rect2(0, 0, 300, 300)
+
+[sub_resource type="Theme" id="Theme_mm2br"]
+RichTextLabel/colors/default_color = Color(0.34117648, 0, 0, 1)
+RichTextLabel/font_sizes/normal_font_size = 71
+RichTextLabel/fonts/bold_font = null
+RichTextLabel/fonts/italics_font = ExtResource("2_18j7c")
+RichTextLabel/fonts/normal_font = ExtResource("4_q36t1")
+
+[node name="textbox" type="CanvasLayer" unique_id=1164002068]
+
+[node name="Box" type="NinePatchRect" parent="." unique_id=1580933745]
+texture_filter = 1
+offset_left = 274.99994
+offset_top = 752.00006
+offset_right = 714.4224
+offset_bottom = 846.6202
+scale = Vector2(3.1177292, 3.1177292)
+texture = ExtResource("1_ccmy2")
+patch_margin_left = 19
+patch_margin_top = 33
+patch_margin_right = 35
+patch_margin_bottom = 35
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Face" type="TextureRect" parent="." unique_id=1286030446]
+offset_left = 295.00003
+offset_top = 649.00006
+offset_right = 595.0
+offset_bottom = 949.00006
+scale = Vector2(1.274393, 1.274393)
+texture = SubResource("AtlasTexture_q36t1")
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=317876478]
+texture_filter = 1
+offset_left = 698.0
+offset_top = 776.0
+offset_right = 1547.0
+offset_bottom = 846.0
+theme = SubResource("Theme_mm2br")
+bbcode_enabled = true
+text = "Title"
+
+[node name="Body" type="RichTextLabel" parent="." unique_id=1176706165]
+texture_filter = 1
+offset_left = 698.0
+offset_top = 843.0
+offset_right = 1547.0
+offset_bottom = 913.0
+theme = SubResource("Theme_mm2br")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "Body."

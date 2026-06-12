@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cjrig12icgn2m"]
+
+[ext_resource type="Texture2D" uid="uid://cr35lo8uul6tq" path="res://img/borders.png" id="1_gkfcp"]
+
+[node name="UI" type="CanvasLayer" unique_id=657324367]
+
+[node name="Borders" type="TextureRect" parent="." unique_id=818136265]
+offset_right = 480.0
+offset_bottom = 270.0
+scale = Vector2(4.0002913, 4.0002913)
+texture = ExtResource("1_gkfcp")
