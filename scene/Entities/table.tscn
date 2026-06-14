@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://c02j8xi70jfl3"]
+
+[ext_resource type="Script" uid="uid://dyl2sfle2bwhw" path="res://scene/Entities/table.gd" id="1_u8g5d"]
+[ext_resource type="Texture2D" uid="uid://8y5wmjok7i3p" path="res://img/Pixel Life - Desk Essentials/spritesheet.png" id="1_w6dq1"]
+[ext_resource type="PackedScene" uid="uid://u4i77243adtd" path="res://scene/tool/interactable.tscn" id="2_u8g5d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uonkg"]
+size = Vector2(30, 14)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_igyta"]
+radius = 17.720045
+
+[node name="Table" type="StaticBody2D" unique_id=937812277]
+texture_filter = 1
+script = ExtResource("1_u8g5d")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=421223846]
+texture = ExtResource("1_w6dq1")
+hframes = 9
+vframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2113308579]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_uonkg")
+
+[node name="interactable" parent="." unique_id=574524158 instance=ExtResource("2_u8g5d")]
+interact_name = "Access Table"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable" unique_id=771083043]
+shape = SubResource("CircleShape2D_igyta")

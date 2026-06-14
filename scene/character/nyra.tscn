@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://f4j6aucq1mgj" path="res://scene/character/nyra.gd" id="1_argbh"]
 [ext_resource type="Texture2D" uid="uid://dk1g0gslo4jly" path="res://img/character template.png" id="2_argbh"]
+[ext_resource type="PackedScene" uid="uid://dx7ka15ye5r0a" path="res://scene/tool/interaction_component.tscn" id="3_f67dc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_argbh"]
 atlas = ExtResource("2_argbh")
@@ -111,7 +112,7 @@ animations = [{
 "speed": 6.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 5.0,
 "texture": SubResource("AtlasTexture_5yuu8")
 }],
 "loop": true,
@@ -144,7 +145,7 @@ animations = [{
 "speed": 6.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 5.0,
 "texture": SubResource("AtlasTexture_qk4su")
 }],
 "loop": true,
@@ -177,7 +178,7 @@ animations = [{
 "speed": 6.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 5.0,
 "texture": SubResource("AtlasTexture_536m1")
 }],
 "loop": true,
@@ -210,7 +211,7 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 5.0,
 "texture": SubResource("AtlasTexture_ovi76")
 }],
 "loop": true,
@@ -231,8 +232,7 @@ script = ExtResource("1_argbh")
 [node name="animation" type="AnimatedSprite2D" parent="." unique_id=796319765]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_j30ok")
-animation = &"right"
-frame_progress = 0.099241294
+animation = &"right_3"
 offset = Vector2(0, -13.205)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2070985840]
@@ -245,3 +245,7 @@ shape = SubResource("RectangleShape2D_argbh")
 position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_33ee0")
 debug_color = Color(0.7787557, 0.4172317, 0.3723189, 0.41960785)
+
+[node name="Interaction_Component" parent="." unique_id=1925596338 instance=ExtResource("3_f67dc")]
+position = Vector2(0, -11)
+scale = Vector2(0.74846214, 0.74846214)

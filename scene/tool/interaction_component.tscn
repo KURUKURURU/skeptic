@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dx7ka15ye5r0a"]
+
+[ext_resource type="Script" uid="uid://cwycumcpnonga" path="res://interacting.gd" id="1_kh0jo"]
+[ext_resource type="FontFile" uid="uid://dmgogwstguumm" path="res://tff/NotJamMonoClean13/Not Jam Mono Clean 16.ttf" id="2_vh7tj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vh7tj"]
+radius = 35.014282
+
+[sub_resource type="LabelSettings" id="LabelSettings_owuuw"]
+font = ExtResource("2_vh7tj")
+outline_size = 4
+outline_color = Color(0.012617188, 0.012617188, 0, 1)
+
+[node name="Interaction_Component" type="Node2D" unique_id=1925596338]
+texture_filter = 1
+script = ExtResource("1_kh0jo")
+
+[node name="Interactable" type="Area2D" parent="." unique_id=1343696547]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=1235559606]
+shape = SubResource("CircleShape2D_vh7tj")
+
+[node name="Label" type="Label" parent="." unique_id=1039234648]
+offset_left = -87.0
+offset_top = -66.0
+offset_right = 88.0
+offset_bottom = -26.0
+text = "testing"
+label_settings = SubResource("LabelSettings_owuuw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="area_entered" from="Interactable" to="." method="_on_interactable_area_entered"]
+[connection signal="area_exited" from="Interactable" to="." method="_on_interactable_area_exited"]

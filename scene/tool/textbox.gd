@@ -2,6 +2,9 @@ extends CanvasLayer
 @onready var face: TextureRect = $Face
 @onready var title: RichTextLabel = $Title
 @onready var body: RichTextLabel = $Body
+@onready var animation: AnimationPlayer = $animation
+
+var can_move := true
 
 signal advance
 
@@ -22,7 +25,12 @@ func talk(name: String, message: String):
 	
 	show()
 	
+	animation.play("type")
+	await animation.animation_finished
+	
+	can_move = false
 	await advance
 	
 	hide()
+	can_move = true
 	return

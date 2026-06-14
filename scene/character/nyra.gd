@@ -2,18 +2,16 @@ extends CharacterBody2D
 @onready var animation = $animation
 
 @export var speed = 300 
-var moving = true
+
 var last_direction
-#
-#func _process(delta: float) -> void:
-	#if :
-		##if animation.animation == "wal":
-		#animation.play("walk")
+
+var moving:
+	get:
+		return Textbox.can_move
 
 func _physics_process(delta):
 # setup direction of movement
 	var direction = Input.get_vector("left", "right", "up", "down")
-	 
 	
 	if moving:
 		if Input.is_action_pressed("right"):
@@ -40,7 +38,6 @@ func _physics_process(delta):
 			animation.play(str(last_direction) + "_3")
 			direction.x = 0
 			direction.y = 0
-			
 		else:
 			direction = Vector2.ZERO
 			
