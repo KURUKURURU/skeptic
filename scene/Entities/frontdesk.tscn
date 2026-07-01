@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dl7w0bxc42jlw"]
+
+[ext_resource type="Script" uid="uid://ckefr6fi0iqcb" path="res://scene/Entities/frontdesk.gd" id="1_1ncpb"]
+[ext_resource type="Texture2D" uid="uid://8y5wmjok7i3p" path="res://img/Pixel Life - Desk Essentials/spritesheet.png" id="2_vbpmr"]
+[ext_resource type="PackedScene" uid="uid://u4i77243adtd" path="res://scene/tool/interactable.tscn" id="3_wf5dv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uonkg"]
+size = Vector2(30, 14)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_igyta"]
+radius = 17.720045
+
+[node name="frontdesk" type="StaticBody2D" unique_id=937812277]
+texture_filter = 1
+script = ExtResource("1_1ncpb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=421223846]
+texture = ExtResource("2_vbpmr")
+hframes = 9
+vframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2113308579]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_uonkg")
+
+[node name="interactable" parent="." unique_id=574524158 instance=ExtResource("3_wf5dv")]
+interact_name = "Check Front Desk?"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable" unique_id=771083043]
+shape = SubResource("CircleShape2D_igyta")

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://brjxkyjvqb5y8"]
+
+[ext_resource type="Script" uid="uid://bb6r4uaqiqb6m" path="res://scene/scene/start_menu.gd" id="1_exexu"]
+
+[node name="StartMenu" type="Node2D" unique_id=1329627510]
+script = ExtResource("1_exexu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1048552064]
+offset_left = 72.0
+offset_top = 659.0
+offset_right = 483.0
+offset_bottom = 1050.0
+theme_override_constants/separation = 25
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=1107346014]
+custom_minimum_size = Vector2(175, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Start"
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=1520255262]
+custom_minimum_size = Vector2(175, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Settings"
+
+[node name="Settings2" type="Button" parent="VBoxContainer" unique_id=893874221]
+custom_minimum_size = Vector2(175, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]

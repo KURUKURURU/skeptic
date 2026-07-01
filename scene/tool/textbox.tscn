@@ -3,12 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://cc315sjfah1jq" path="res://img/9slice.png" id="1_ccmy2"]
 [ext_resource type="Script" uid="uid://bfjskkwar3qti" path="res://scene/tool/textbox.gd" id="1_q36t1"]
 [ext_resource type="FontFile" uid="uid://c86d27kc7crf3" path="res://tff/monogram/ttf/monogram-extended-italic.ttf" id="2_18j7c"]
-[ext_resource type="Texture2D" uid="uid://j66k34row0x8" path="res://img/face test.png" id="2_er8op"]
+[ext_resource type="Texture2D" uid="uid://baj0ub52imyo5" path="res://img/gradient.png" id="2_mm2br"]
+[ext_resource type="Texture2D" uid="uid://mpxn6iai0kik" path="res://img/emotes/Nyra/default.png" id="3_q36t1"]
 [ext_resource type="FontFile" uid="uid://cqqe2he1ftv8i" path="res://tff/monogram/ttf/monogram-extended.ttf" id="4_q36t1"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_q36t1"]
-atlas = ExtResource("2_er8op")
-region = Rect2(0, 0, 300, 300)
+[ext_resource type="FontFile" uid="uid://ju5f3ke20gxn" path="res://tff/Old Fax.ttf" id="7_h12o4"]
 
 [sub_resource type="Theme" id="Theme_mm2br"]
 RichTextLabel/colors/default_color = Color(0.34117648, 0, 0, 1)
@@ -16,6 +14,9 @@ RichTextLabel/font_sizes/normal_font_size = 71
 RichTextLabel/fonts/bold_font = null
 RichTextLabel/fonts/italics_font = ExtResource("2_18j7c")
 RichTextLabel/fonts/normal_font = ExtResource("4_q36t1")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q36t1"]
+atlas = ExtResource("3_q36t1")
 
 [sub_resource type="Animation" id="Animation_q36t1"]
 length = 0.001
@@ -57,12 +58,38 @@ _data = {
 [node name="textbox" type="CanvasLayer" unique_id=1164002068]
 script = ExtResource("1_q36t1")
 
+[node name="Grad" type="TextureRect" parent="." unique_id=1087572414]
+texture_filter = 1
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(4.000054, 4.000054)
+texture = ExtResource("2_mm2br")
+
+[node name="Grad2" type="TextureRect" parent="." unique_id=1732163441]
+self_modulate = Color(1, 1, 1, 0.23529412)
+texture_filter = 1
+offset_left = 208.0
+offset_top = 614.0
+offset_right = 578.995
+offset_bottom = 669.50287
+scale = Vector2(4.000054, 4.000054)
+texture = ExtResource("2_mm2br")
+expand_mode = 1
+
+[node name="Other" type="TextureRect" parent="." unique_id=103590072]
+offset_left = 1218.0
+offset_top = 326.0
+offset_right = 1518.0
+offset_bottom = 626.0
+scale = Vector2(2.2737145, 2.2737145)
+stretch_mode = 2
+
 [node name="Box" type="NinePatchRect" parent="." unique_id=1580933745]
 texture_filter = 1
 offset_left = 274.99994
-offset_top = 752.00006
+offset_top = 832.00006
 offset_right = 714.4224
-offset_bottom = 846.6202
+offset_bottom = 900.00006
 scale = Vector2(3.1177292, 3.1177292)
 texture = ExtResource("1_ccmy2")
 patch_margin_left = 19
@@ -72,34 +99,44 @@ patch_margin_bottom = 35
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
-[node name="Face" type="TextureRect" parent="." unique_id=1286030446]
-offset_left = 294.00003
-offset_top = 648.0
-offset_right = 594.0
-offset_bottom = 948.0
-scale = Vector2(1.274393, 1.274393)
-texture = SubResource("AtlasTexture_q36t1")
-
 [node name="Title" type="RichTextLabel" parent="." unique_id=317876478]
 texture_filter = 1
-offset_left = 698.0
-offset_top = 776.0
-offset_right = 1547.0
-offset_bottom = 846.0
+clip_contents = false
+offset_left = 671.0
+offset_top = 764.0
+offset_right = 1299.0
+offset_bottom = 834.0
 theme = SubResource("Theme_mm2br")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 0.58431375, 1)
+theme_override_constants/outline_size = 19
+theme_override_fonts/normal_font = ExtResource("7_h12o4")
+theme_override_font_sizes/normal_font_size = 56
 bbcode_enabled = true
 text = "Title"
 
 [node name="Body" type="RichTextLabel" parent="." unique_id=1176706165]
 texture_filter = 1
-offset_left = 698.0
-offset_top = 843.0
-offset_right = 1547.0
-offset_bottom = 913.0
+offset_left = 682.0
+offset_top = 866.0
+offset_right = 1607.0
+offset_bottom = 1028.0
 theme = SubResource("Theme_mm2br")
-theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/normal_font_size = 61
 bbcode_enabled = true
 text = "Body."
+
+[node name="Face" type="TextureRect" parent="." unique_id=1286030446]
+texture_filter = 4
+clip_contents = true
+offset_left = 278.0
+offset_top = 681.00006
+offset_right = 578.0
+offset_bottom = 861.3217
+scale = Vector2(1.9445461, 1.9445461)
+texture = SubResource("AtlasTexture_q36t1")
+expand_mode = 1
+stretch_mode = 2
 
 [node name="animation" type="AnimationPlayer" parent="." unique_id=389651681]
 libraries/ = SubResource("AnimationLibrary_h12o4")

@@ -220,7 +220,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_argbh"]
-size = Vector2(30, 16)
+size = Vector2(44, 16)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_33ee0"]
 radius = 25.0
@@ -231,8 +231,10 @@ script = ExtResource("1_argbh")
 
 [node name="animation" type="AnimatedSprite2D" parent="." unique_id=796319765]
 texture_filter = 1
+scale = Vector2(1.1409583, 1.1409583)
 sprite_frames = SubResource("SpriteFrames_j30ok")
 animation = &"right_3"
+frame_progress = 0.91394573
 offset = Vector2(0, -13.205)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2070985840]
@@ -240,6 +242,7 @@ position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_argbh")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=2139379583]
+position = Vector2(0, -11)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1737172400]
 position = Vector2(0, 3)
@@ -247,5 +250,5 @@ shape = SubResource("CircleShape2D_33ee0")
 debug_color = Color(0.7787557, 0.4172317, 0.3723189, 0.41960785)
 
 [node name="Interaction_Component" parent="." unique_id=1925596338 instance=ExtResource("3_f67dc")]
-position = Vector2(0, -11)
-scale = Vector2(0.74846214, 0.74846214)
+position = Vector2(0, -13)
+scale = Vector2(0.861277, 0.861277)

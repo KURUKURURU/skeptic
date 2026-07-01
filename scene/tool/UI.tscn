@@ -7,5 +7,5 @@
 [node name="Borders" type="TextureRect" parent="." unique_id=818136265]
 offset_right = 480.0
 offset_bottom = 270.0
-scale = Vector2(4.0002913, 4.0002913)
+scale = Vector2(4.014, 4.014)
 texture = ExtResource("1_gkfcp")

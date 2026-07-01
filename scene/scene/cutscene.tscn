@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://b1jgu01qyx6p7"]
+
+[ext_resource type="Script" uid="uid://cx0py8fof42f8" path="res://scene/scene/cutscene.gd" id="1_jphlh"]
+[ext_resource type="Texture2D" uid="uid://ba7proag0r64r" path="res://img/borders_cutscene.png" id="2_t74d8"]
+[ext_resource type="Texture2D" uid="uid://bbai6tsmemy0y" path="res://img/Test Images for Cutscene/A.png" id="3_nsh12"]
+[ext_resource type="Texture2D" uid="uid://cdje5a07mo00a" path="res://img/Test Images for Cutscene/B.png" id="4_26wbl"]
+[ext_resource type="Texture2D" uid="uid://dlwl08epjt3ib" path="res://img/Test Images for Cutscene/C.png" id="5_h7lgc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xy68d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_nsh12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_26wbl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_h7lgc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.0
+}]
+
+[node name="Cutscene" type="CanvasLayer" unique_id=1823137715]
+script = ExtResource("1_jphlh")
+
+[node name="Borders" type="TextureRect" parent="." unique_id=1704845849]
+texture_filter = 1
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_t74d8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1557994067]
+position = Vector2(960, 543)
+sprite_frames = SubResource("SpriteFrames_xy68d")

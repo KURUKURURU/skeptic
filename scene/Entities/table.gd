@@ -7,6 +7,7 @@ func _ready() -> void:
 	
 func _on_interact():
 	
-	await Textbox.talk("", "This is a table.")
-	await Textbox.talk("", "Looks like someone spilled something on it.")
+	t.window("Nyra", "default")
+	await t.talk(true, "This is a table.")
+	await t.talk(true, "Looks like someone spilled something on it.")
 	

@@ -11,14 +11,15 @@ config_version=5
 [application]
 
 config/name="Skeptic"
-run/main_scene="uid://dg2sd46gbm3f"
+run/main_scene="uid://brjxkyjvqb5y8"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
 
+Cutscene="*uid://b1jgu01qyx6p7"
 Ui="*uid://cjrig12icgn2m"
-Textbox="*uid://cq8f61txgqc3s"
+t="*uid://cq8f61txgqc3s"
 
 [display]
 
@@ -76,3 +77,7 @@ interact={
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="mobile"
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+textures/stretch/scale_mode="fractional"
+textures/root_node_auto_translate=true
+textures/size/viewport_height=1080
+textures/size/viewport_width=1920

@@ -7,7 +7,7 @@ var last_direction
 
 var moving:
 	get:
-		return Textbox.can_move
+		return t.can_move
 
 func _physics_process(delta):
 # setup direction of movement
