@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://dl7w0bxc42jlw"]
 
 [ext_resource type="Script" uid="uid://ckefr6fi0iqcb" path="res://scene/Entities/frontdesk.gd" id="1_1ncpb"]
-[ext_resource type="Texture2D" uid="uid://8y5wmjok7i3p" path="res://img/Pixel Life - Desk Essentials/spritesheet.png" id="2_vbpmr"]
+[ext_resource type="Texture2D" uid="uid://be6wfwctt33cx" path="res://img/office_maps/office_mapffe.png" id="2_1ncpb"]
 [ext_resource type="PackedScene" uid="uid://u4i77243adtd" path="res://scene/tool/interactable.tscn" id="3_wf5dv"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_uonkg"]
-size = Vector2(30, 14)
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_vbpmr"]
+points = PackedVector2Array(0, 0, 0, 23, 99, 23, 99, -19, 76, -19, 76, 0)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_igyta"]
 radius = 17.720045
@@ -15,13 +15,14 @@ texture_filter = 1
 script = ExtResource("1_1ncpb")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=421223846]
-texture = ExtResource("2_vbpmr")
-hframes = 9
-vframes = 2
+texture = ExtResource("2_1ncpb")
+offset = Vector2(0, -34.095)
+hframes = 5
+vframes = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2113308579]
-position = Vector2(0, -1)
-shape = SubResource("RectangleShape2D_uonkg")
+position = Vector2(-50, -8)
+shape = SubResource("ConvexPolygonShape2D_vbpmr")
 
 [node name="interactable" parent="." unique_id=574524158 instance=ExtResource("3_wf5dv")]
 interact_name = "Check Front Desk?"
