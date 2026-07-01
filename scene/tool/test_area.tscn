@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://8y5wmjok7i3p" path="res://img/Pixel Life - Desk Essentials/spritesheet.png" id="1_ip1th"]
 [ext_resource type="Script" uid="uid://c3upxln30c1hp" path="res://scene/tool/test_area.gd" id="1_t8i87"]
-[ext_resource type="Texture2D" uid="uid://cx1hpkhmkw746" path="res://img/office_map2.png" id="2_fbwr2"]
+[ext_resource type="Texture2D" uid="uid://dxuytp1vetf3n" path="res://img/office_maps/office_map3.png" id="2_fbwr2"]
 [ext_resource type="Texture2D" uid="uid://cjedb0ww277u5" path="res://img/wallsTile.png" id="2_t8i87"]
 [ext_resource type="PackedScene" uid="uid://ce2veelvo8cfp" path="res://scene/character/nyra.tscn" id="3_dl5wq"]
 [ext_resource type="PackedScene" uid="uid://c02j8xi70jfl3" path="res://scene/Entities/table.tscn" id="5_dl5wq"]
@@ -60,6 +60,8 @@ texture_region_size = Vector2i(50, 50)
 0:6/0 = 0
 1:6/0 = 0
 2:6/0 = 0
+3:1/0 = 0
+3:1/0/y_sort_origin = -100
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fam6o"]
 texture = ExtResource("1_ip1th")
@@ -137,7 +139,7 @@ tile_set = SubResource("TileSet_hrtff")
 [node name="TestingMap2" type="TileMapLayer" parent="TileMapLayers" unique_id=1944264221]
 y_sort_enabled = true
 scale = Vector2(1.7129421, 1.7129421)
-tile_map_data = PackedByteArray("AAAHAAAAAAAAAAUAAAAHAAEAAAAAAAUAAAAKAAEAAAABAAUAAAAPAAUAAAAAAAYAAAATAAIAAAAAAAYAAAAQAAUAAAAAAAYAAAALAAgAAAAAAAUAAAALAAkAAAAAAAUAAAAFAAcAAAACAAUAAAAFAAgAAAACAAYAAAAQAAwAAAACAAUAAAAQAA0AAAACAAYAAAAKAAgAAAACAAUAAAAKAAkAAAACAAYAAAARAAIAAAAAAAYAAAASAAIAAAAAAAYAAAAUAAIAAAAAAAYAAAAVAAIAAAAAAAYAAAAWAAIAAAAAAAYAAAAXAAIAAAAAAAYAAAAOAAUAAAAAAAYAAAA=")
+tile_map_data = PackedByteArray("AAAHAAAAAAAAAAUAAAAHAAEAAAAAAAUAAAAKAAEAAAABAAUAAAAPAAUAAAAAAAYAAAATAAIAAAAAAAYAAAAQAAUAAAAAAAYAAAALAAgAAAAAAAUAAAALAAkAAAAAAAUAAAAFAAcAAAACAAUAAAAFAAgAAAACAAYAAAAQAAwAAAACAAUAAAAQAA0AAAACAAYAAAAKAAgAAAACAAUAAAAKAAkAAAACAAYAAAARAAIAAAAAAAYAAAASAAIAAAAAAAYAAAAUAAIAAAAAAAYAAAAVAAIAAAAAAAYAAAAWAAIAAAAAAAYAAAAXAAIAAAAAAAYAAAAOAAUAAAAAAAYAAAAIAAoAAAADAAEAAAA=")
 tile_set = SubResource("TileSet_hrtff")
 
 [node name="floor" type="TileMapLayer" parent="TileMapLayers" unique_id=854684315]
