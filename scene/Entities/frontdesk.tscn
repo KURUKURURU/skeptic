@@ -4,11 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://be6wfwctt33cx" path="res://img/office_maps/office_mapffe.png" id="2_1ncpb"]
 [ext_resource type="PackedScene" uid="uid://u4i77243adtd" path="res://scene/tool/interactable.tscn" id="3_wf5dv"]
 
-[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_vbpmr"]
-points = PackedVector2Array(0, 0, 0, 23, 99, 23, 99, -19, 76, -19, 76, 0)
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_igyta"]
-radius = 17.720045
+radius = 21.095022
 
 [node name="frontdesk" type="StaticBody2D" unique_id=937812277]
 texture_filter = 1
@@ -20,12 +17,13 @@ offset = Vector2(0, -34.095)
 hframes = 5
 vframes = 5
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2113308579]
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=1644624490]
 position = Vector2(-50, -8)
-shape = SubResource("ConvexPolygonShape2D_vbpmr")
+polygon = PackedVector2Array(0, 0, 0, 23, 100, 23, 100, -18, 76, -18, 76, 0)
 
 [node name="interactable" parent="." unique_id=574524158 instance=ExtResource("3_wf5dv")]
 interact_name = "Check Front Desk?"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="interactable" unique_id=771083043]
+position = Vector2(-25, 0)
 shape = SubResource("CircleShape2D_igyta")

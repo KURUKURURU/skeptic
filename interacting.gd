@@ -1,5 +1,5 @@
 extends Node2D
-@onready var label: Label = $Label
+@onready var label: Label = $A/Label
 
 var current_interactions := []
 var can_interact := true

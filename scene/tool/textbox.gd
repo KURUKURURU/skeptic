@@ -1,5 +1,4 @@
 extends CanvasLayer
-@onready var face: TextureRect = $Face
 @onready var other: TextureRect = $Other
 @onready var title: RichTextLabel = $Title
 @onready var body: RichTextLabel = $Body
