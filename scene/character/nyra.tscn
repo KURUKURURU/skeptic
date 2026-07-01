@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://f4j6aucq1mgj" path="res://scene/character/nyra.gd" id="1_argbh"]
 [ext_resource type="Texture2D" uid="uid://dk1g0gslo4jly" path="res://img/character template.png" id="2_argbh"]
 [ext_resource type="PackedScene" uid="uid://dx7ka15ye5r0a" path="res://scene/tool/interaction_component.tscn" id="3_f67dc"]
+[ext_resource type="AudioStream" uid="uid://1nwrmfr822pq" path="res://sfx/footsteps.wav" id="4_j30ok"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_argbh"]
 atlas = ExtResource("2_argbh")
@@ -228,6 +229,7 @@ radius = 25.0
 [node name="Nyra" type="CharacterBody2D" unique_id=624278877]
 y_sort_enabled = true
 script = ExtResource("1_argbh")
+speed = 200
 
 [node name="animation" type="AnimatedSprite2D" parent="." unique_id=796319765]
 texture_filter = 1
@@ -252,3 +254,7 @@ debug_color = Color(0.7787557, 0.4172317, 0.3723189, 0.41960785)
 [node name="Interaction_Component" parent="." unique_id=1925596338 instance=ExtResource("3_f67dc")]
 position = Vector2(0, -13)
 scale = Vector2(0.861277, 0.861277)
+
+[node name="steps" type="AudioStreamPlayer" parent="." unique_id=2146680553]
+stream = ExtResource("4_j30ok")
+volume_db = -14.597

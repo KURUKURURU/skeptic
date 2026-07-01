@@ -7,13 +7,8 @@ func _ready() -> void:
 	
 func _on_interact():
 	
-	t.window("Nyra", "default")
-	await t.talk(true, "Time for the night shift.")
-	await t.talk(true, "...")
-	
-	t.other_window("Business Woman", "default")
-	await t.talk(false, "Time for the night shift.")
-	
-	t.window("Nyra", "default")
-	await t.talk(true, "...")
+	await t.talk("Nyra", "Time for the night shift.")
+	await t.talk("Nyra", "...")
+	await t.talk("Business Woman", "Yeah.")
+	await t.talk("Business Woman", "...")
 	

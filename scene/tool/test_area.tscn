@@ -2,14 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://8y5wmjok7i3p" path="res://img/Pixel Life - Desk Essentials/spritesheet.png" id="1_ip1th"]
 [ext_resource type="Script" uid="uid://c3upxln30c1hp" path="res://scene/tool/test_area.gd" id="1_t8i87"]
-[ext_resource type="Texture2D" uid="uid://cxe5t1n8tkcio" path="res://img/office_map.png" id="2_fam6o"]
 [ext_resource type="Texture2D" uid="uid://cjedb0ww277u5" path="res://img/wallsTile.png" id="2_t8i87"]
 [ext_resource type="PackedScene" uid="uid://ce2veelvo8cfp" path="res://scene/character/nyra.tscn" id="3_dl5wq"]
+[ext_resource type="Texture2D" uid="uid://cp4fhal2tfnmc" path="res://img/office_map1.png" id="3_hrtff"]
 [ext_resource type="PackedScene" uid="uid://c02j8xi70jfl3" path="res://scene/Entities/table.tscn" id="5_dl5wq"]
 [ext_resource type="PackedScene" uid="uid://dl7w0bxc42jlw" path="res://scene/Entities/frontdesk.tscn" id="7_fbwr2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hrtff"]
-texture = ExtResource("2_fam6o")
+texture = ExtResource("3_hrtff")
 texture_region_size = Vector2i(50, 50)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-25.714287, -8.571428, 25.714287, -8.571428, 25.714287, 25.714287, -25.714287, 25.714287)
@@ -126,6 +126,7 @@ script = ExtResource("1_t8i87")
 
 [node name="TileMapLayers" type="Node2D" parent="." unique_id=1093075241]
 y_sort_enabled = true
+texture_filter = 1
 
 [node name="TestingMap" type="TileMapLayer" parent="TileMapLayers" unique_id=2117819170]
 y_sort_enabled = true
@@ -136,7 +137,7 @@ tile_set = SubResource("TileSet_hrtff")
 [node name="TestingMap2" type="TileMapLayer" parent="TileMapLayers" unique_id=1944264221]
 y_sort_enabled = true
 scale = Vector2(1.7129421, 1.7129421)
-tile_map_data = PackedByteArray("AAAHAAAAAAAAAAUAAAAHAAEAAAAAAAUAAAAKAAEAAAABAAUAAAAPAAUAAAABAAUAAAATAAIAAAABAAUAAAAQAAQAAAAAAAUAAAAQAAUAAAAAAAUAAAALAAgAAAAAAAUAAAALAAkAAAAAAAUAAAA=")
+tile_map_data = PackedByteArray("AAAHAAAAAAAAAAUAAAAHAAEAAAAAAAUAAAAKAAEAAAABAAUAAAAPAAUAAAAAAAYAAAATAAIAAAAAAAYAAAAQAAUAAAAAAAYAAAALAAgAAAAAAAUAAAALAAkAAAAAAAUAAAAFAAcAAAACAAUAAAAFAAgAAAACAAYAAAAQAAwAAAACAAUAAAAQAA0AAAACAAYAAAAKAAgAAAACAAUAAAAKAAkAAAACAAYAAAARAAIAAAAAAAYAAAASAAIAAAAAAAYAAAAUAAIAAAAAAAYAAAAVAAIAAAAAAAYAAAAWAAIAAAAAAAYAAAAXAAIAAAAAAAYAAAAOAAUAAAAAAAYAAAA=")
 tile_set = SubResource("TileSet_hrtff")
 
 [node name="floor" type="TileMapLayer" parent="TileMapLayers" unique_id=854684315]
