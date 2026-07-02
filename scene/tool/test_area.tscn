@@ -13,6 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://bom55clupw6ur" path="res://sfx/office.wav" id="11_ve6uf"]
 [ext_resource type="AudioStream" uid="uid://b1uk8e48wjbeo" path="res://sfx/peopletalking.mp3" id="12_g8jak"]
 [ext_resource type="PackedScene" uid="uid://yb50sx7d6e7h" path="res://scene/Entities/painting.tscn" id="12_j8led"]
+[ext_resource type="PackedScene" uid="uid://dpwhgg4w6tq2o" path="res://scene/Entities/security_camera.tscn" id="12_m836i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hrtff"]
 texture = ExtResource("2_hrtff")
@@ -327,9 +328,25 @@ scale = Vector2(-1, 1)
 
 [node name="talk_alert" parent="Entities" unique_id=1158920270 instance=ExtResource("12_j8led")]
 position = Vector2(74.03316, 779.5581)
+tag = "Odd Painting"
+message = "This doesn't really speak to me."
 
 [node name="talk_alert2" parent="Entities" unique_id=1708695725 instance=ExtResource("12_j8led")]
 position = Vector2(1161.3262, 779.55804)
+tag = "Odd Painting"
+message = "Ugh."
+
+[node name="SecurityCamera" parent="Entities" unique_id=1165677714 node_paths=PackedStringArray("player") instance=ExtResource("12_m836i")]
+position = Vector2(1018.78455, 745.3039)
+player = NodePath("../Nyra")
+
+[node name="SecurityCamera2" parent="Entities" unique_id=877749824 node_paths=PackedStringArray("player") instance=ExtResource("12_m836i")]
+position = Vector2(670.71826, 745.3039)
+player = NodePath("../Nyra")
+
+[node name="SecurityCamera3" parent="Entities" unique_id=2030923279 node_paths=PackedStringArray("player") instance=ExtResource("12_m836i")]
+position = Vector2(134.25415, 745.3039)
+player = NodePath("../Nyra")
 
 [node name="Noise" type="Node2D" parent="." unique_id=1785445178]
 

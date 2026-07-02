@@ -2,7 +2,7 @@ extends Node2D
 
 
 func _ready() -> void:
-	await Cutscene.scene("Test")
+	#await Cutscene.scene("Test")
 	Music._play("lounge")
 	Ui.show()
 	

@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://dpwhgg4w6tq2o"]
+
+[ext_resource type="Script" uid="uid://1cn6tgtg0bj1" path="res://security_camera.gd" id="1_1nq5y"]
+[ext_resource type="Texture2D" uid="uid://5trv4mdr8gsx" path="res://img/cam1.png" id="2_ho5cm"]
+[ext_resource type="Texture2D" uid="uid://blgc7quvbt0wn" path="res://img/cam2.png" id="3_dcvu2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hku1y"]
+atlas = ExtResource("2_ho5cm")
+region = Rect2(50, 0, 50, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5i2of"]
+atlas = ExtResource("3_dcvu2")
+region = Rect2(50, 0, 50, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3jc4"]
+atlas = ExtResource("2_ho5cm")
+region = Rect2(0, 0, 50, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_31vbf"]
+atlas = ExtResource("3_dcvu2")
+region = Rect2(0, 0, 50, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8wqe"]
+atlas = ExtResource("2_ho5cm")
+region = Rect2(100, 0, 50, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_piy6a"]
+atlas = ExtResource("3_dcvu2")
+region = Rect2(100, 0, 50, 45)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gj1o8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hku1y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5i2of")
+}],
+"loop": true,
+"name": &"down",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a3jc4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_31vbf")
+}],
+"loop": true,
+"name": &"left",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8wqe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_piy6a")
+}],
+"loop": true,
+"name": &"right",
+"speed": 1.0
+}]
+
+[node name="SecurityCamera" type="Node2D" unique_id=1165677714]
+texture_filter = 1
+script = ExtResource("1_1nq5y")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=557002533]
+sprite_frames = SubResource("SpriteFrames_gj1o8")
+animation = &"down"
+frame_progress = 0.07135642
