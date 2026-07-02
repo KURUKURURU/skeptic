@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://baj0ub52imyo5" path="res://img/gradient.png" id="2_mm2br"]
 [ext_resource type="FontFile" uid="uid://cqqe2he1ftv8i" path="res://tff/monogram/ttf/monogram-extended.ttf" id="4_q36t1"]
 [ext_resource type="FontFile" uid="uid://ju5f3ke20gxn" path="res://tff/Old Fax.ttf" id="7_h12o4"]
+[ext_resource type="AudioStream" uid="uid://ctdr7fl8xlgi3" path="res://sfx/zap.wav" id="7_v5p5v"]
 
 [sub_resource type="Theme" id="Theme_mm2br"]
 RichTextLabel/colors/default_color = Color(0.34117648, 0, 0, 1)
@@ -123,3 +124,7 @@ text = "Body."
 
 [node name="animation" type="AnimationPlayer" parent="." unique_id=389651681]
 libraries/ = SubResource("AnimationLibrary_h12o4")
+
+[node name="zap" type="AudioStreamPlayer" parent="." unique_id=786869910]
+stream = ExtResource("7_v5p5v")
+volume_db = -13.684

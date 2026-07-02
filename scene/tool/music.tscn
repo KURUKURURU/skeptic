@@ -1,8 +1,13 @@
 [gd_scene format=3 uid="uid://bxmmqdnxngb2c"]
 
-[node name="Music" type="Node2D" unique_id=1170057234]
+[ext_resource type="Script" uid="uid://bjhf77eta1y7p" path="res://scene/tool/music.gd" id="1_bnybd"]
+[ext_resource type="AudioStream" uid="uid://bm7gniea4dsup" path="res://sfx/loungeMusic.wav" id="1_l3iqb"]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1018982906]
+[node name="Music" type="Node2D" unique_id=1170057234]
+script = ExtResource("1_bnybd")
+
+[node name="LoungeMusic" type="AudioStreamPlayer" parent="." unique_id=1018982906]
+stream = ExtResource("1_l3iqb")
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=1214044052]
 

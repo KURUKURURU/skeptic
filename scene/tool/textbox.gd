@@ -1,8 +1,10 @@
 extends CanvasLayer
+
 @onready var other: TextureRect = $Other
 @onready var title: RichTextLabel = $Title
 @onready var body: RichTextLabel = $Body
 @onready var animation: AnimationPlayer = $animation
+@onready var zap: AudioStreamPlayer = $zap
 
 var can_move := true
 
@@ -30,7 +32,7 @@ func talk(name: String, message: String):
 	title.text = str(name)
 	
 	show()
-	
+	zap.play()
 	animation.play("type")
 	await animation.animation_finished
 	can_move = false

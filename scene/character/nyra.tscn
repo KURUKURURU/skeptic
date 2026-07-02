@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dk1g0gslo4jly" path="res://img/character template.png" id="2_argbh"]
 [ext_resource type="PackedScene" uid="uid://dx7ka15ye5r0a" path="res://scene/tool/interaction_component.tscn" id="3_f67dc"]
 [ext_resource type="AudioStream" uid="uid://1nwrmfr822pq" path="res://sfx/footsteps.wav" id="4_j30ok"]
+[ext_resource type="Texture2D" uid="uid://dssh3ioutmr5x" path="res://img/dropshadow.png" id="5_82qvb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_argbh"]
 atlas = ExtResource("2_argbh")
@@ -258,3 +259,14 @@ scale = Vector2(0.861277, 0.861277)
 [node name="steps" type="AudioStreamPlayer" parent="." unique_id=2146680553]
 stream = ExtResource("4_j30ok")
 volume_db = -14.597
+
+[node name="drop" type="TextureRect" parent="." unique_id=2003785776]
+self_modulate = Color(1, 1, 1, 0.43137255)
+texture_filter = 1
+offset_left = -23.0
+offset_top = -51.0
+offset_right = 27.0
+offset_bottom = 17.0
+scale = Vector2(0.93124634, 1.0878494)
+mouse_filter = 2
+texture = ExtResource("5_82qvb")

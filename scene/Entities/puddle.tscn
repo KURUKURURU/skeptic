@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://ddipobvylmpy3"]
+
+[ext_resource type="Script" uid="uid://frfvlfwdqgyk" path="res://scene/Entities/puddle.gd" id="1_ktpq3"]
+[ext_resource type="Texture2D" uid="uid://cwm0rrgye8n4y" path="res://img/office_maps/drip.png" id="2_hlw8d"]
+[ext_resource type="PackedScene" uid="uid://u4i77243adtd" path="res://scene/tool/interactable.tscn" id="3_fmhs8"]
+[ext_resource type="Texture2D" uid="uid://b7cbf02b3t0x6" path="res://img/wetsign.png" id="4_hlw8d"]
+[ext_resource type="AudioStream" uid="uid://cob05al13vv2p" path="res://sfx/drip.wav" id="5_fmhs8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmhs8"]
+atlas = ExtResource("2_hlw8d")
+region = Rect2(0, 0, 50, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lotju"]
+atlas = ExtResource("2_hlw8d")
+region = Rect2(50, 0, 50, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oyx1s"]
+atlas = ExtResource("2_hlw8d")
+region = Rect2(100, 0, 50, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ho58x"]
+atlas = ExtResource("2_hlw8d")
+region = Rect2(150, 0, 50, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3viku"]
+animations = [{
+"frames": [{
+"duration": 0.84,
+"texture": SubResource("AtlasTexture_fmhs8")
+}, {
+"duration": 0.28,
+"texture": SubResource("AtlasTexture_lotju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oyx1s")
+}, {
+"duration": 10.0,
+"texture": SubResource("AtlasTexture_ho58x")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ogan6"]
+size = Vector2(43, 39.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_igyta"]
+radius = 18.0
+
+[node name="puddle" type="StaticBody2D" unique_id=937812277]
+texture_filter = 1
+script = ExtResource("1_ktpq3")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1095957876]
+sprite_frames = SubResource("SpriteFrames_3viku")
+autoplay = "default"
+frame_progress = 0.29734406
+offset = Vector2(0, -2.57)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=234866480]
+position = Vector2(-3.5, 20.25)
+shape = SubResource("RectangleShape2D_ogan6")
+
+[node name="interactable" parent="." unique_id=574524158 instance=ExtResource("3_fmhs8")]
+position = Vector2(-15, 6)
+interact_name = "Indoor Waterpark"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable" unique_id=771083043]
+position = Vector2(14, 11)
+shape = SubResource("CircleShape2D_igyta")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1821547434]
+offset_left = -31.0
+offset_top = 11.0
+offset_bottom = 56.0
+texture = ExtResource("4_hlw8d")
+
+[node name="drip" type="AudioStreamPlayer2D" parent="." unique_id=1116808428]
+position = Vector2(0, 20)
+stream = ExtResource("5_fmhs8")
+volume_db = 9.63
+pitch_scale = 0.23
+attenuation = 29.857058

@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 Cutscene="*uid://b1jgu01qyx6p7"
 Ui="*uid://cjrig12icgn2m"
 t="*uid://cq8f61txgqc3s"
+Music="*uid://bxmmqdnxngb2c"
 
 [display]
 
