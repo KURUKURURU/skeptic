@@ -14,6 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://b1uk8e48wjbeo" path="res://sfx/peopletalking.mp3" id="12_g8jak"]
 [ext_resource type="PackedScene" uid="uid://yb50sx7d6e7h" path="res://scene/Entities/painting.tscn" id="12_j8led"]
 [ext_resource type="PackedScene" uid="uid://dpwhgg4w6tq2o" path="res://scene/Entities/security_camera.tscn" id="12_m836i"]
+[ext_resource type="PackedScene" uid="uid://caiksosy6vwdh" path="res://scene/Entities/trashbin.tscn" id="13_j8led"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hrtff"]
 texture = ExtResource("2_hrtff")
@@ -329,12 +330,16 @@ scale = Vector2(-1, 1)
 [node name="talk_alert" parent="Entities" unique_id=1158920270 instance=ExtResource("12_j8led")]
 position = Vector2(74.03316, 779.5581)
 tag = "Odd Painting"
-message = "This doesn't really speak to me."
+message = 2
 
 [node name="talk_alert2" parent="Entities" unique_id=1708695725 instance=ExtResource("12_j8led")]
-position = Vector2(1161.3262, 779.55804)
-tag = "Odd Painting"
-message = "Ugh."
+position = Vector2(1160.2211, 779.55804)
+tag = "Weird Painting"
+message = 1
+
+[node name="talk_alert3" parent="Entities" unique_id=1938082396 instance=ExtResource("12_j8led")]
+position = Vector2(546.96136, 759.116)
+tag = "[i]Eden Labs"
 
 [node name="SecurityCamera" parent="Entities" unique_id=1165677714 node_paths=PackedStringArray("player") instance=ExtResource("12_m836i")]
 position = Vector2(1018.78455, 745.3039)
@@ -347,6 +352,17 @@ player = NodePath("../Nyra")
 [node name="SecurityCamera3" parent="Entities" unique_id=2030923279 node_paths=PackedStringArray("player") instance=ExtResource("12_m836i")]
 position = Vector2(134.25415, 745.3039)
 player = NodePath("../Nyra")
+
+[node name="trash" parent="Entities" unique_id=271530276 instance=ExtResource("13_j8led")]
+position = Vector2(487.29285, 860.7735)
+
+[node name="trash2" parent="Entities" unique_id=1924890925 instance=ExtResource("13_j8led")]
+position = Vector2(655.80115, 953.0387)
+message = 2
+
+[node name="trash3" parent="Entities" unique_id=90830140 instance=ExtResource("13_j8led")]
+position = Vector2(1128.7294, 809.94476)
+message = 2
 
 [node name="Noise" type="Node2D" parent="." unique_id=1785445178]
 

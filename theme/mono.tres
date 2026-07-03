@@ -1,0 +1,13 @@
+[gd_resource type="Theme" format=3 uid="uid://fd3toknymqv4"]
+
+[ext_resource type="FontFile" uid="uid://dmgogwstguumm" path="res://tff/NotJamMonoClean13/Not Jam Mono Clean 16.ttf" id="1_o585a"]
+[ext_resource type="FontFile" uid="uid://c86d27kc7crf3" path="res://tff/monogram/ttf/monogram-extended-italic.ttf" id="2_8jc2r"]
+[ext_resource type="FontFile" uid="uid://cqqe2he1ftv8i" path="res://tff/monogram/ttf/monogram-extended.ttf" id="3_natgc"]
+
+[resource]
+RichTextLabel/font_sizes/bold_font_size = 70
+RichTextLabel/font_sizes/italics_font_size = 70
+RichTextLabel/font_sizes/normal_font_size = 70
+RichTextLabel/fonts/bold_font = ExtResource("1_o585a")
+RichTextLabel/fonts/italics_font = ExtResource("2_8jc2r")
+RichTextLabel/fonts/normal_font = ExtResource("3_natgc")

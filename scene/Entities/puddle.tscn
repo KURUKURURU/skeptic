@@ -79,6 +79,7 @@ texture = ExtResource("4_hlw8d")
 [node name="drip" type="AudioStreamPlayer2D" parent="." unique_id=1116808428]
 position = Vector2(0, 20)
 stream = ExtResource("5_fmhs8")
-volume_db = -4.888
+volume_db = 1.853
 pitch_scale = 0.24
-attenuation = 3.1383312
+attenuation = 6.7271557
+panning_strength = 3.0

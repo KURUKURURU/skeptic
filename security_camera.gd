@@ -2,7 +2,14 @@ extends Node2D
 @export var player : Node2D
 @onready var sprite: AnimatedSprite2D = $Sprite2D
 
+@onready var interactable: Area2D = $interactable
 
+func _ready() -> void:
+	interactable.interact = _on_interact
+	
+func _on_interact():
+	
+	await t.talk("Nyra", "They're watching me.")
 
 func _process(_delta):
 	if not is_instance_valid(player):

@@ -1,16 +1,10 @@
 [gd_scene format=3 uid="uid://dx7ka15ye5r0a"]
 
 [ext_resource type="Script" uid="uid://cwycumcpnonga" path="res://interacting.gd" id="1_kh0jo"]
-[ext_resource type="FontFile" uid="uid://dmgogwstguumm" path="res://tff/NotJamMonoClean13/Not Jam Mono Clean 16.ttf" id="2_vh7tj"]
+[ext_resource type="Theme" uid="uid://fd3toknymqv4" path="res://theme/mono.tres" id="2_vh7tj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vh7tj"]
 radius = 35.014282
-
-[sub_resource type="LabelSettings" id="LabelSettings_owuuw"]
-font = ExtResource("2_vh7tj")
-font_size = 47
-outline_size = 24
-outline_color = Color(0.012617188, 0.012617188, 0, 1)
 
 [node name="Interaction_Component" type="Node2D" unique_id=1925596338]
 texture_filter = 1
@@ -25,13 +19,16 @@ shape = SubResource("CircleShape2D_vh7tj")
 
 [node name="A" type="CanvasLayer" parent="." unique_id=1365359157]
 
-[node name="Label" type="Label" parent="A" unique_id=1039234648]
+[node name="Label" type="RichTextLabel" parent="A" unique_id=1687440739]
+clip_contents = false
 offset_left = 307.28
 offset_top = 986.625
 offset_right = 1114.2797
 offset_bottom = 1076.6256
+theme = ExtResource("2_vh7tj")
+theme_override_constants/outline_size = 20
+bbcode_enabled = true
 text = "testing"
-label_settings = SubResource("LabelSettings_owuuw")
 vertical_alignment = 1
 
 [connection signal="area_entered" from="Interactable" to="." method="_on_interactable_area_entered"]

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://1cn6tgtg0bj1" path="res://security_camera.gd" id="1_1nq5y"]
 [ext_resource type="Texture2D" uid="uid://5trv4mdr8gsx" path="res://img/cam1.png" id="2_ho5cm"]
 [ext_resource type="Texture2D" uid="uid://blgc7quvbt0wn" path="res://img/cam2.png" id="3_dcvu2"]
+[ext_resource type="PackedScene" uid="uid://u4i77243adtd" path="res://scene/tool/interactable.tscn" id="4_ho5cm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hku1y"]
 atlas = ExtResource("2_ho5cm")
@@ -64,6 +65,9 @@ animations = [{
 "speed": 1.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_dcvu2"]
+radius = 18.0
+
 [node name="SecurityCamera" type="Node2D" unique_id=1165677714]
 texture_filter = 1
 script = ExtResource("1_1nq5y")
@@ -71,4 +75,13 @@ script = ExtResource("1_1nq5y")
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=557002533]
 sprite_frames = SubResource("SpriteFrames_gj1o8")
 animation = &"down"
-frame_progress = 0.07135642
+frame_progress = 0.65264416
+speed_scale = 1.5
+
+[node name="interactable" parent="." unique_id=574524158 instance=ExtResource("4_ho5cm")]
+position = Vector2(-15, 25)
+interact_name = "Camera"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable" unique_id=515814638]
+position = Vector2(14, 11)
+shape = SubResource("CircleShape2D_dcvu2")
