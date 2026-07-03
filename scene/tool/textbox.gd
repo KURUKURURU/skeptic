@@ -5,6 +5,8 @@ extends CanvasLayer
 @onready var body: RichTextLabel = $Body
 @onready var animation: AnimationPlayer = $animation
 @onready var zap: AudioStreamPlayer = $zap
+@onready var box: NinePatchRect = $Box
+@onready var box_2: NinePatchRect = $Box2
 
 var can_move := true
 

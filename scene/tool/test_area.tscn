@@ -371,21 +371,25 @@ position = Vector2(334, 829)
 stream = ExtResource("11_ve6uf")
 volume_db = 10.593
 autoplay = true
+bus = &"bg"
 
 [node name="Office2" type="AudioStreamPlayer2D" parent="Noise" unique_id=1646823280]
 position = Vector2(1576, 924)
 stream = ExtResource("11_ve6uf")
 volume_db = 10.593
 autoplay = true
+bus = &"bg"
 
 [node name="People" type="AudioStreamPlayer2D" parent="Noise" unique_id=1498093241]
 position = Vector2(1453, 829)
 stream = ExtResource("12_g8jak")
 volume_db = 10.593
 autoplay = true
+bus = &"bg"
 
 [node name="People2" type="AudioStreamPlayer2D" parent="Noise" unique_id=1279157305]
 position = Vector2(433, 924)
 stream = ExtResource("12_g8jak")
 volume_db = 10.593
 autoplay = true
+bus = &"bg"

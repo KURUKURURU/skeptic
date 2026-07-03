@@ -261,7 +261,7 @@ stream = ExtResource("4_j30ok")
 volume_db = -14.597
 
 [node name="drop" type="TextureRect" parent="." unique_id=2003785776]
-self_modulate = Color(1, 1, 1, 0.43137255)
+self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 0.43137255)
 texture_filter = 1
 offset_left = -23.0
 offset_top = -51.0

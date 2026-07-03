@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://c86d27kc7crf3" path="res://tff/monogram/ttf/monogram-extended-italic.ttf" id="2_18j7c"]
 [ext_resource type="Texture2D" uid="uid://baj0ub52imyo5" path="res://img/gradient.png" id="2_mm2br"]
 [ext_resource type="FontFile" uid="uid://cqqe2he1ftv8i" path="res://tff/monogram/ttf/monogram-extended.ttf" id="4_q36t1"]
+[ext_resource type="FontFile" uid="uid://cnk3lw1v0o663" path="res://tff/NotJamMonoClean13/Not Jam Mono Clean 13.ttf" id="7_22sdc"]
 [ext_resource type="FontFile" uid="uid://ju5f3ke20gxn" path="res://tff/Old Fax.ttf" id="7_h12o4"]
 [ext_resource type="AudioStream" uid="uid://ctdr7fl8xlgi3" path="res://sfx/zap.wav" id="7_v5p5v"]
 
@@ -66,9 +67,9 @@ texture = ExtResource("2_mm2br")
 self_modulate = Color(1, 1, 1, 0.14117648)
 texture_filter = 1
 offset_left = 208.0
-offset_top = 612.0
+offset_top = 610.0
 offset_right = 578.995
-offset_bottom = 667.50287
+offset_bottom = 665.50287
 scale = Vector2(4.000054, 4.000054)
 texture = ExtResource("2_mm2br")
 expand_mode = 1
@@ -96,6 +97,23 @@ patch_margin_bottom = 35
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
+[node name="Box2" type="NinePatchRect" parent="." unique_id=2063933815]
+visible = false
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+texture_filter = 1
+offset_left = 274.99994
+offset_top = 832.00006
+offset_right = 714.4224
+offset_bottom = 900.00006
+scale = Vector2(3.1177292, 3.1177292)
+texture = ExtResource("1_ccmy2")
+patch_margin_left = 19
+patch_margin_top = 33
+patch_margin_right = 35
+patch_margin_bottom = 35
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
 [node name="Title" type="RichTextLabel" parent="." unique_id=317876478]
 texture_filter = 1
 clip_contents = false
@@ -107,7 +125,9 @@ theme = SubResource("Theme_mm2br")
 theme_override_colors/font_outline_color = Color(1, 1, 0.58431375, 1)
 theme_override_constants/outline_size = 19
 theme_override_fonts/normal_font = ExtResource("7_h12o4")
+theme_override_fonts/italics_font = ExtResource("7_22sdc")
 theme_override_font_sizes/normal_font_size = 56
+theme_override_font_sizes/italics_font_size = 69
 bbcode_enabled = true
 text = "Title"
 

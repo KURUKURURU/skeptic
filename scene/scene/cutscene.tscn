@@ -5,6 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://bbai6tsmemy0y" path="res://img/Test Images for Cutscene/A.png" id="3_nsh12"]
 [ext_resource type="Texture2D" uid="uid://cdje5a07mo00a" path="res://img/Test Images for Cutscene/B.png" id="4_26wbl"]
 [ext_resource type="Texture2D" uid="uid://dlwl08epjt3ib" path="res://img/Test Images for Cutscene/C.png" id="5_h7lgc"]
+[ext_resource type="Texture2D" uid="uid://cpgnbpd4db1im" path="res://img/Test Images for Cutscene/open/1.png" id="5_xy68d"]
+[ext_resource type="Texture2D" uid="uid://xct5wiun2cdg" path="res://img/Test Images for Cutscene/2.png" id="6_sw3fx"]
+[ext_resource type="Texture2D" uid="uid://cjr4qp4akawmi" path="res://img/Test Images for Cutscene/3.png" id="7_w8nt0"]
+[ext_resource type="Texture2D" uid="uid://bl2x0xm0o420y" path="res://img/Test Images for Cutscene/4.png" id="8_2ldfh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xy68d"]
 animations = [{
@@ -21,10 +25,123 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_xy68d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_sw3fx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_w8nt0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2ldfh")
+}],
+"loop": true,
+"name": &"open",
+"speed": 1.0
 }]
+
+[sub_resource type="Animation" id="Animation_weotu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.03529412, 0.023529412, 0.05490196, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_f2atu"]
+resource_name = "off"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.03529412, 0.023529412, 0.05490196, 1), Color(0.03529412, 0.023529412, 0.05490196, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_oby0n"]
+resource_name = "on"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.03529412, 0.023529412, 0.05490196, 0), Color(0.03529412, 0.023529412, 0.05490196, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4kqkr"]
+_data = {
+&"RESET": SubResource("Animation_weotu"),
+&"off": SubResource("Animation_f2atu"),
+&"on": SubResource("Animation_oby0n")
+}
 
 [node name="Cutscene" type="CanvasLayer" unique_id=1823137715]
 script = ExtResource("1_jphlh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1557994067]
+texture_filter = 3
+position = Vector2(960, 543)
+scale = Vector2(2.485, 2.485)
+sprite_frames = SubResource("SpriteFrames_xy68d")
+animation = &"open"
+frame_progress = 0.40169796
 
 [node name="Borders" type="TextureRect" parent="." unique_id=1704845849]
 texture_filter = 1
@@ -32,6 +149,10 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_t74d8")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1557994067]
-position = Vector2(960, 543)
-sprite_frames = SubResource("SpriteFrames_xy68d")
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1079204543]
+offset_right = 1918.0
+offset_bottom = 1080.0
+color = Color(0.03529412, 0.023529412, 0.05490196, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect" unique_id=731434197]
+libraries/ = SubResource("AnimationLibrary_4kqkr")
