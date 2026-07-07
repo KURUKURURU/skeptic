@@ -14,6 +14,7 @@ radius = 25.0
 
 [node name="Nyra" type="CharacterBody2D" unique_id=624278877]
 y_sort_enabled = true
+collision_layer = 2
 script = ExtResource("1_argbh")
 speed = 200
 

@@ -1,5 +1,5 @@
 extends State
-class_name NPCIdle
+class_name NPC_Move
 
 # im so dang done with this: https://www.youtube.com/watch?v=ow_Lum-Agbs
 
@@ -31,6 +31,9 @@ func Update(delta: float):
 func Physics_Update(_delta: float):
 	if NPC:
 		NPC.velocity = move_direction * move_speed
+		
+	if wander_time < 0:
+		Transitioned.emit(self, "idle")
 
 func get_direction():
 	return move_direction

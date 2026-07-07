@@ -3,13 +3,15 @@
 [ext_resource type="Script" uid="uid://bi735boctqc5u" path="res://scripts/npc.gd" id="1_v1cxo"]
 [ext_resource type="SpriteFrames" uid="uid://c45l64cp1tcjp" path="res://img/spriteframes/nyra_spriteframes.tres" id="2_y3tbb"]
 [ext_resource type="Script" uid="uid://8qqvvjkyxlva" path="res://scripts/states/state_machine.gd" id="3_rnkmb"]
-[ext_resource type="Script" uid="uid://cfje3puh636hb" path="res://scripts/states/NPCIdle.gd" id="4_y3tbb"]
+[ext_resource type="Script" uid="uid://cfje3puh636hb" path="res://scripts/states/NPC_Idle.gd" id="4_y3tbb"]
+[ext_resource type="Script" uid="uid://b3uxggijnrf0v" path="res://scripts/states/NPC_Move.gd" id="5_rnkmb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q75ou"]
 size = Vector2(44, 16)
 
 [node name="NPC" type="CharacterBody2D" unique_id=2085148079]
 texture_filter = 1
+collision_layer = 4
 script = ExtResource("1_v1cxo")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=139420180]
@@ -26,9 +28,14 @@ offset = Vector2(0, -12.11)
 
 [node name="StateMachine" type="Node" parent="." unique_id=530703613 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("3_rnkmb")
-initial_state = NodePath("Idle")
+initial_state = NodePath("Move")
 
-[node name="Idle" type="Node" parent="StateMachine" unique_id=1405085020 node_paths=PackedStringArray("NPC")]
+[node name="Idle" type="Node" parent="StateMachine" unique_id=477191407 node_paths=PackedStringArray("NPC")]
 script = ExtResource("4_y3tbb")
 NPC = NodePath("../..")
 metadata/_custom_type_script = "uid://cfje3puh636hb"
+
+[node name="Move" type="Node" parent="StateMachine" unique_id=1511685912 node_paths=PackedStringArray("NPC")]
+script = ExtResource("5_rnkmb")
+NPC = NodePath("../..")
+metadata/_custom_type_script = "uid://b3uxggijnrf0v"
