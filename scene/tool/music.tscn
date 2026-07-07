@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bxmmqdnxngb2c"]
 
-[ext_resource type="Script" uid="uid://bjhf77eta1y7p" path="res://scene/tool/music.gd" id="1_bnybd"]
+[ext_resource type="Script" uid="uid://bjhf77eta1y7p" path="res://scripts/music.gd" id="1_bnybd"]
 [ext_resource type="AudioStream" uid="uid://bm7gniea4dsup" path="res://sfx/loungeMusic.wav" id="1_l3iqb"]
 
 [node name="Music" type="Node2D" unique_id=1170057234]

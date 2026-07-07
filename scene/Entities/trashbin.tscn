@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://caiksosy6vwdh"]
 
-[ext_resource type="Script" uid="uid://bs1gl0tce8o1f" path="res://scene/Entities/trashbin.gd" id="1_7e1q1"]
+[ext_resource type="Script" uid="uid://bs1gl0tce8o1f" path="res://scripts/trashbin.gd" id="1_7e1q1"]
 [ext_resource type="PackedScene" uid="uid://u4i77243adtd" path="res://scene/tool/interactable.tscn" id="2_7e1q1"]
 [ext_resource type="Texture2D" uid="uid://brqqa5g5m5geo" path="res://img/trashvertical.png" id="2_n6lif"]
 

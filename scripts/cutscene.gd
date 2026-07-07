@@ -3,6 +3,7 @@ extends CanvasLayer
 @onready var img: AnimatedSprite2D = $AnimatedSprite2D
 @onready var black: ColorRect = $ColorRect
 @onready var animation: AnimationPlayer = $ColorRect/AnimationPlayer
+@onready var wind: AudioStreamPlayer = $wind
 
 func _ready() -> void:
 	hide()
@@ -31,6 +32,7 @@ func __test():
 	await wait(1.0)
 	
 func __open():
+	wind.play()
 	img.play("open")
 	animation.play("off")
 	await animation.animation_finished
@@ -47,12 +49,12 @@ func __open():
 	
 	narrate()
 	await t.talk("", "[color=white]In a swift gesture, the man directs the Doctor’s eyes to his. They are eerily still. Staring far through the Doctor, and through the wall behind him.")
-	
+	t.box.show()
 	await t.talk("[i]???", "Keep an eye out, Doctor. They’re always out to get you,")
 	
 	narrate()
 	await t.talk("", "[color=white]The man leans forward.")
-	
+	t.box.show()
 	await t.talk("[i]???", "Scaling an operation, you’ll always have to keep that truth tucked neat when meeting anyone.")
 	await t.talk("Doctor", "Yes. I believe you’re right.")
 	await t.talk("[i]???", "In the 20th Century, only the paranoid survive.")
@@ -61,6 +63,7 @@ func __open():
 	
 	animation.play("on")
 	await animation.animation_finished
+	wind.stop()
 	
 	await wait(1.0)
 
@@ -81,4 +84,4 @@ func narrate():
 	
 	await t.advance
 	
-	t.box2.hide()
+	t.box_2.hide()

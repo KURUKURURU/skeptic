@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dpwhgg4w6tq2o"]
 
-[ext_resource type="Script" uid="uid://1cn6tgtg0bj1" path="res://security_camera.gd" id="1_1nq5y"]
+[ext_resource type="Script" uid="uid://1cn6tgtg0bj1" path="res://scripts/security_camera.gd" id="1_1nq5y"]
 [ext_resource type="Texture2D" uid="uid://5trv4mdr8gsx" path="res://img/cam1.png" id="2_ho5cm"]
 [ext_resource type="Texture2D" uid="uid://blgc7quvbt0wn" path="res://img/cam2.png" id="3_dcvu2"]
 [ext_resource type="PackedScene" uid="uid://u4i77243adtd" path="res://scene/tool/interactable.tscn" id="4_ho5cm"]
@@ -38,7 +38,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5i2of")
 }],
-"loop": true,
+"loop": 1,
 "name": &"down",
 "speed": 1.0
 }, {
@@ -49,7 +49,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_31vbf")
 }],
-"loop": true,
+"loop": 1,
 "name": &"left",
 "speed": 1.0
 }, {
@@ -60,7 +60,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_piy6a")
 }],
-"loop": true,
+"loop": 1,
 "name": &"right",
 "speed": 1.0
 }]

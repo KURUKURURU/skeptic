@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dl7w0bxc42jlw"]
 
-[ext_resource type="Script" uid="uid://ckefr6fi0iqcb" path="res://scene/Entities/frontdesk.gd" id="1_1ncpb"]
+[ext_resource type="Script" uid="uid://ckefr6fi0iqcb" path="res://scripts/frontdesk.gd" id="1_1ncpb"]
 [ext_resource type="Texture2D" uid="uid://be6wfwctt33cx" path="res://img/office_maps/office_mapffe.png" id="2_1ncpb"]
 [ext_resource type="PackedScene" uid="uid://u4i77243adtd" path="res://scene/tool/interactable.tscn" id="3_wf5dv"]
 

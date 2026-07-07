@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cq8f61txgqc3s"]
 
 [ext_resource type="Texture2D" uid="uid://cc315sjfah1jq" path="res://img/9slice.png" id="1_ccmy2"]
-[ext_resource type="Script" uid="uid://bfjskkwar3qti" path="res://scene/tool/textbox.gd" id="1_q36t1"]
+[ext_resource type="Script" uid="uid://bfjskkwar3qti" path="res://scripts/textbox.gd" id="1_q36t1"]
 [ext_resource type="FontFile" uid="uid://c86d27kc7crf3" path="res://tff/monogram/ttf/monogram-extended-italic.ttf" id="2_18j7c"]
 [ext_resource type="Texture2D" uid="uid://baj0ub52imyo5" path="res://img/gradient.png" id="2_mm2br"]
 [ext_resource type="FontFile" uid="uid://cqqe2he1ftv8i" path="res://tff/monogram/ttf/monogram-extended.ttf" id="4_q36t1"]
@@ -141,6 +141,7 @@ theme = SubResource("Theme_mm2br")
 theme_override_font_sizes/normal_font_size = 61
 bbcode_enabled = true
 text = "Body."
+visible_characters_behavior = 1
 
 [node name="animation" type="AnimationPlayer" parent="." unique_id=389651681]
 libraries/ = SubResource("AnimationLibrary_h12o4")

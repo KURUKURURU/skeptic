@@ -33,9 +33,9 @@ func talk(name: String, message: String):
 	body.text = str(message)
 	title.text = str(name)
 	
-	show()
 	zap.play()
 	animation.play("type")
+	show()
 	await animation.animation_finished
 	can_move = false
 	

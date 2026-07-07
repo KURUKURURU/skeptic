@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Skeptic"
 run/main_scene="uid://brjxkyjvqb5y8"
-config/features=PackedStringArray("4.6", "Mobile")
+config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -27,10 +27,6 @@ Music="*uid://bxmmqdnxngb2c"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="viewport"
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 [input]
 

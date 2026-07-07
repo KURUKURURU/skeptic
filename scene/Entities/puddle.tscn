@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ddipobvylmpy3"]
 
-[ext_resource type="Script" uid="uid://frfvlfwdqgyk" path="res://scene/Entities/puddle.gd" id="1_ktpq3"]
+[ext_resource type="Script" uid="uid://frfvlfwdqgyk" path="res://scripts/puddle.gd" id="1_ktpq3"]
 [ext_resource type="Texture2D" uid="uid://cwm0rrgye8n4y" path="res://img/office_maps/drip.png" id="2_hlw8d"]
 [ext_resource type="PackedScene" uid="uid://u4i77243adtd" path="res://scene/tool/interactable.tscn" id="3_fmhs8"]
 [ext_resource type="Texture2D" uid="uid://b7cbf02b3t0x6" path="res://img/wetsign.png" id="4_hlw8d"]
@@ -37,7 +37,7 @@ animations = [{
 "duration": 10.0,
 "texture": SubResource("AtlasTexture_ho58x")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
@@ -83,3 +83,4 @@ volume_db = 1.853
 pitch_scale = 0.24
 attenuation = 6.7271557
 panning_strength = 3.0
+bus = &"bg"

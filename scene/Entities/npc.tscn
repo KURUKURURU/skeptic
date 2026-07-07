@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://dq06jirvt5ies"]
+
+[ext_resource type="Script" uid="uid://bi735boctqc5u" path="res://scripts/npc.gd" id="1_v1cxo"]
+[ext_resource type="SpriteFrames" uid="uid://c45l64cp1tcjp" path="res://img/spriteframes/nyra_spriteframes.tres" id="2_y3tbb"]
+[ext_resource type="Script" uid="uid://8qqvvjkyxlva" path="res://scripts/states/state_machine.gd" id="3_rnkmb"]
+[ext_resource type="Script" uid="uid://cfje3puh636hb" path="res://scripts/states/NPCIdle.gd" id="4_y3tbb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q75ou"]
+size = Vector2(44, 16)
+
+[node name="NPC" type="CharacterBody2D" unique_id=2085148079]
+texture_filter = 1
+script = ExtResource("1_v1cxo")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=139420180]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_q75ou")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=728727981]
+scale = Vector2(1.141, 1.141)
+sprite_frames = ExtResource("2_y3tbb")
+animation = &"up"
+offset = Vector2(0, -12.11)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=777764856]
+
+[node name="StateMachine" type="Node" parent="." unique_id=530703613 node_paths=PackedStringArray("initial_state")]
+script = ExtResource("3_rnkmb")
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=1405085020 node_paths=PackedStringArray("NPC")]
+script = ExtResource("4_y3tbb")
+NPC = NodePath("../..")
+metadata/_custom_type_script = "uid://cfje3puh636hb"
