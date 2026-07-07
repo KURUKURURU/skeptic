@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://ddt3admykma5a"]
+
+[ext_resource type="PackedScene" uid="uid://cj51xh04d60td" path="res://scene/Entities/smart_npc.tscn" id="1_xeg1f"]
+
+[sub_resource type="Curve2D" id="Curve2D_8rj5n"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 593.9227, 1229.2819, 0, 0, 0, 0, 593.9227, 1132.5968, 0, 0, 0, 0, 649.1713, 1132.5968, 0, 0, 0, 0, 649.1713, 1229.2819, 0, 0, 0, 0, 593.9227, 1229.2819)
+}
+point_count = 5
+
+[node name="Node2D" type="Node2D" unique_id=2071983268]
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1928342638]
+position = Vector2(100, -100)
+curve = SubResource("Curve2D_8rj5n")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1905542194]
+position = Vector2(593.9227, 1229.2819)
+rotates = false
+
+[node name="SmartNPC" parent="Path2D/PathFollow2D" unique_id=1809051609 node_paths=PackedStringArray("path_follow", "path") instance=ExtResource("1_xeg1f")]
+scale = Vector2(1.0000001, 1.0000001)
+path_follow = NodePath("..")
+path = NodePath("../..")
+loop_path = true
+metadata/_scene_painted = true

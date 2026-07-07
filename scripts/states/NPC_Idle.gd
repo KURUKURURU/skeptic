@@ -30,8 +30,8 @@ func Physics_Update(_delta: float):
 	if NPC:
 		NPC.velocity = Vector2.ZERO
 		
-	if stand_time == 0:
-		Transitioned.emit(self, "move")
+	if stand_time < 0:
+		Transitioned.emit(self, "Move")
 
 func wait(seconds: float) -> void:
 	await get_tree().create_timer(seconds).timeout

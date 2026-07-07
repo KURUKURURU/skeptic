@@ -33,7 +33,7 @@ func Physics_Update(_delta: float):
 		NPC.velocity = move_direction * move_speed
 		
 	if wander_time < 0:
-		Transitioned.emit(self, "idle")
+		Transitioned.emit(self, "Idle")
 
 func get_direction():
 	return move_direction

@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://dpwhgg4w6tq2o" path="res://scene/Entities/security_camera.tscn" id="12_m836i"]
 [ext_resource type="PackedScene" uid="uid://caiksosy6vwdh" path="res://scene/Entities/trashbin.tscn" id="13_j8led"]
 [ext_resource type="PackedScene" uid="uid://dq06jirvt5ies" path="res://scene/Entities/npc.tscn" id="14_yfd60"]
+[ext_resource type="PackedScene" uid="uid://cj51xh04d60td" path="res://scene/Entities/smart_npc.tscn" id="15_xd2lx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hrtff"]
 texture = ExtResource("2_hrtff")
@@ -244,6 +245,12 @@ sources/4 = SubResource("TileSetAtlasSource_fbwr2")
 sources/0 = SubResource("TileSetAtlasSource_hrtff")
 sources/3 = SubResource("TileSetAtlasSource_qidl4")
 
+[sub_resource type="Curve2D" id="Curve2D_xd2lx"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 593.9227, 1229.2819, 0, 0, 0, 0, 593.9227, 1132.5968, 0, 0, 0, 0, 649.1713, 1132.5968, 0, 0, 0, 0, 649.1713, 1229.2819, 0, 0, 0, 0, 593.9227, 1229.2819)
+}
+point_count = 5
+
 [node name="TestArea" type="Node2D" unique_id=798318388]
 y_sort_enabled = true
 script = ExtResource("1_t8i87")
@@ -296,7 +303,7 @@ offset = Vector2(0, -20.915)
 zoom = Vector2(3.43, 3.43)
 limit_left = -504
 limit_top = 447
-limit_right = 2213
+limit_right = 2398
 limit_bottom = 2529
 position_smoothing_enabled = true
 
@@ -387,6 +394,24 @@ metadata/_scene_painted = true
 
 [node name="NPC" parent="Entities" unique_id=2085148079 instance=ExtResource("14_yfd60")]
 position = Vector2(496.68512, 1223.7571)
+
+[node name="Path2D" type="Path2D" parent="Entities" unique_id=718482937]
+y_sort_enabled = true
+curve = SubResource("Curve2D_xd2lx")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Entities/Path2D" unique_id=527254806]
+y_sort_enabled = true
+rotates = false
+
+[node name="SmartNPC" parent="Entities/Path2D/PathFollow2D" unique_id=1809051609 node_paths=PackedStringArray("path_follow", "path") instance=ExtResource("15_xd2lx")]
+y_sort_enabled = true
+position = Vector2(-4.2915344e-05, -6.1035156e-05)
+scale = Vector2(1.0000001, 1.0000001)
+motion_mode = 1
+path_follow = NodePath("..")
+path = NodePath("../..")
+loop_path = true
+metadata/_scene_painted = true
 
 [node name="Noise" type="Node2D" parent="." unique_id=1785445178]
 

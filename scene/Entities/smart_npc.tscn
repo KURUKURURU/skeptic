@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cj51xh04d60td"]
+
+[ext_resource type="Script" uid="uid://dd5e66qx2xtrf" path="res://smart_npc.gd" id="1_j0wgl"]
+[ext_resource type="SpriteFrames" uid="uid://c45l64cp1tcjp" path="res://img/spriteframes/nyra_spriteframes.tres" id="2_21hew"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jrvog"]
+size = Vector2(44, 16)
+
+[node name="SmartNPC" type="CharacterBody2D" unique_id=1809051609]
+texture_filter = 1
+script = ExtResource("1_j0wgl")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=208143808]
+shape = SubResource("RectangleShape2D_jrvog")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=98754809]
+scale = Vector2(1.141, 1.141)
+sprite_frames = ExtResource("2_21hew")
+animation = &"up"
+offset = Vector2(0, -12.11)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1250307482]
