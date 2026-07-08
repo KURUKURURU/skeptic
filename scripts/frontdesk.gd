@@ -7,7 +7,18 @@ func _ready() -> void:
 	
 func _on_interact():
 	
-	t._options(3)
-	await t.talk("Nyra", "Time for the night shift.")
+	t.tune_option(1, "YES!! YAY!")
+	t.tune_option(2, "No.")
 	
+	
+	t.talk("", "Time for your night shift?")
+	await t.options(2)
+	
+	
+	match t.answer:
+		1: 
+			await t.talk("Nyra", "Yay.")
+			# do something
+			
+		2: await t.talk("Nyra", "Yay.")
 	

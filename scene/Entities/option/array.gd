@@ -2,23 +2,31 @@ extends Node2D
 @export var amount := 1
 @onready var container: VBoxContainer = $container
 
-@onready var text_1: Control = $container/Option1/Button
-@onready var text_2: Control = $container/Option2/Button
-@onready var text_3: Control = $container/Option3/Button
-@onready var text_4: Control = $container/Option4/Button
+@onready var text_1: Button = $container/Option1/Button
+@onready var text_2: Button = $container/Option2/Button
+@onready var text_3: Button = $container/Option3/Button
+@onready var text_4: Button = $container/Option4/Button
 
 @export var textbox : CanvasLayer
 
 var children 
+var answer: int 
 
 signal advance
 
 func _ready() -> void:
 	children = container.get_children()
-		
-#func _process(_delta: float) -> void:
-	#if Input.is_action_just_pressed("ui_accept"):
-		#advance.emit()
+	reset() # Keep choices hidden on start
+	
+	text_1.pressed.connect(_on_option_selected.bind(1))
+	text_2.pressed.connect(_on_option_selected.bind(2))
+	text_3.pressed.connect(_on_option_selected.bind(3))
+	text_4.pressed.connect(_on_option_selected.bind(4))
+	
+func _on_option_selected(option_number: int) -> void:
+	print("Player selected option: ", option_number)
+	answer = option_number
+	advance.emit() 
 
 func tune(option_number: int, message: String):
 	match option_number:
@@ -30,7 +38,9 @@ func tune(option_number: int, message: String):
 func _ask(options_amount: int):
 	reset()
 	
-	await textbox.finished
+	if textbox.animation.is_playing():
+		await textbox.finished
+	
 	amount = options_amount
 	var shown := 0
 	
@@ -44,7 +54,7 @@ func _ask(options_amount: int):
 	await advance
 	reset()
 	
-	
 func reset():
 	for option in children:
-		option.hide()
+		if option is Control:
+			option.hide()

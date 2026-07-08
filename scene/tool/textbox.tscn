@@ -156,4 +156,4 @@ position = Vector2(1058, 834)
 amount = 0
 textbox = NodePath("..")
 
-[connection signal="finished" from="Array" to="." method="_on_array_finished"]
+[connection signal="advance" from="Array" to="." method="_on_array_advance"]

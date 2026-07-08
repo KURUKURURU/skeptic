@@ -10,6 +10,8 @@ extends CanvasLayer
 @onready var array: Node2D = $Array
 
 var can_move := true
+var array_visible := false
+var answer : int
 
 signal advance
 signal finished
@@ -17,15 +19,13 @@ signal finished
 func _ready() -> void:
 	hide()
 
-
 func _process(delta: float) -> void:
+	answer = array.answer
 	
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("ui_accept") and !array_visible:
 		emit_signal("advance")
-		
 
 func talk(name: String, message: String):
-	
 	if name == "Nyra":
 		title.add_theme_color_override("default_color", Color(0.0, 0.0, 0.0, 1.0))
 	else:
@@ -46,12 +46,19 @@ func talk(name: String, message: String):
 	
 	hide()
 	can_move = true
-	
 	return
 
-func _options(amount: int):
-	array._ask(amount)
+func tune_option(option_number: int, message: String):
+	array.tune(option_number, message)
 
+func options(amount: int):
+	show()
+	array.show()
+	array_visible = true
+	await array._ask(amount)
+	array_visible = false
+	array.hide()
+	#hide()
 
-func _on_array_finished() -> void:
+func _on_array_advance() -> void:
 	advance.emit()

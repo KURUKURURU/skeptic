@@ -307,7 +307,7 @@ y_sort_enabled = true
 scale = Vector2(1.81, 1.81)
 
 [node name="Nyra" parent="Entities" unique_id=624278877 instance=ExtResource("3_dl5wq")]
-position = Vector2(539.22656, 923.20447)
+position = Vector2(-136.46411, 845.8564)
 
 [node name="Camera2D" type="Camera2D" parent="Entities/Nyra" unique_id=959529032]
 offset = Vector2(0, -20.915)
@@ -434,9 +434,10 @@ path = NodePath("../..")
 loop_path = true
 metadata/_scene_painted = true
 
-[node name="ElevatorButtons" parent="Entities" unique_id=1891147331 instance=ExtResource("17_a5q4k")]
+[node name="ElevatorButtons" parent="Entities" unique_id=1891147331 node_paths=PackedStringArray("elevator") instance=ExtResource("17_a5q4k")]
 position = Vector2(-136.4641, 804.42)
 scale = Vector2(1.0000002, 1.0000002)
+elevator = NodePath("../Elevator")
 
 [node name="Elevator" parent="Entities" unique_id=536209988 instance=ExtResource("16_4xese")]
 position = Vector2(-66.85083, 761.8785)
