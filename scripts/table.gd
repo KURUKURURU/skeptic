@@ -7,6 +7,6 @@ func _ready() -> void:
 	
 func _on_interact():
 	
-	await t.talk("", "This is a table.")
-	await t.talk("", "Looks like someone spilled something on it.")
+	await t.talk("", "This is a table.", 0)
+	await t.talk("", "Looks like someone spilled something on it.", 0)
 	

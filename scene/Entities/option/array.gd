@@ -25,7 +25,7 @@ func _ready() -> void:
 	
 func _on_option_selected(option_number: int) -> void:
 	print("Player selected option: ", option_number)
-	answer = option_number
+	if answer != option_number : answer = option_number
 	advance.emit() 
 
 func tune(option_number: int, message: String):
@@ -53,6 +53,7 @@ func _ask(options_amount: int):
 	
 	await advance
 	reset()
+	return
 	
 func reset():
 	for option in children:

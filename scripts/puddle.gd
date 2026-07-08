@@ -9,7 +9,7 @@ func _ready() -> void:
 	
 func _on_interact():
 	
-	await t.talk("", "Scientists don't make great plumbers.")
+	await t.talk("", "Scientists don't make great plumbers.", 0)
 	
 func _process(delta: float) -> void:
 	if sprite_2d.frame == 2:

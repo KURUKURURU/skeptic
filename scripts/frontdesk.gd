@@ -11,14 +11,15 @@ func _on_interact():
 	t.tune_option(2, "No.")
 	
 	
-	t.talk("", "Time for your night shift?")
-	await t.options(2)
+	await t.talk("", "Time for your night shift?", 2)
+	#await t.options(2)
 	
+	var answer = t.array.answer
 	
-	match t.answer:
+	match answer:
 		1: 
-			await t.talk("Nyra", "Yay.")
+			await t.talk("Nyra", "Yay.", 0)
 			# do something
 			
-		2: await t.talk("Nyra", "Yay.")
+		2: await t.talk("Nyra", "Yay.", 0)
 	

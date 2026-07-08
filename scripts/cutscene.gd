@@ -26,9 +26,9 @@ func scene(name: String):
 
 func __test():
 	img.play("default")
-	await t.talk("Nyra", "Hey, what?")
+	await t.talk("Nyra", "Hey, what?", 0)
 	img.frame += 1
-	await t.talk("Nyra", "Anyways...")
+	await t.talk("Nyra", "Anyways...", 0)
 	await wait(1.0)
 	
 func __open():
@@ -37,27 +37,27 @@ func __open():
 	animation.play("off")
 	await animation.animation_finished
 	await wait(3.0)
-	await t.talk("[i]???", "You added a new secretary, yes?")
-	await t.talk("???", "Yeah, and did the usual background check. She's clean, and has years worth of references.")
-	await t.talk("[i]???", "Remember the last girl.")
-	await t.talk("[i]???", "I don’t need to clean a mess like that again.")
-	await t.talk("Doctor", "That was a rare incident, and I have made the necessary preparations against it happening again.")
-	await t.talk("[i]???", "How?")
-	await t.talk("Doctor", "I have subcontracted workers from a trusted ally of our work. ")
-	await t.talk("Doctor", "Their people have experience in all branches of industry, and can keep secrets.")
-	await t.talk("Doctor", "Security, tech experts, even secretaries.")
+	await t.talk("[i]???", "You added a new secretary, yes?", 0)
+	await t.talk("???", "Yeah, and did the usual background check. She's clean, and has years worth of references.", 0)
+	await t.talk("[i]???", "Remember the last girl.", 0)
+	await t.talk("[i]???", "I don’t need to clean a mess like that again.", 0)
+	await t.talk("Doctor", "That was a rare incident, and I have made the necessary preparations against it happening again.", 0)
+	await t.talk("[i]???", "How?", 0)
+	await t.talk("Doctor", "I have subcontracted workers from a trusted ally of our work. ", 0)
+	await t.talk("Doctor", "Their people have experience in all branches of industry, and can keep secrets.", 0)
+	await t.talk("Doctor", "Security, tech experts, even secretaries.", 0)
 	
 	narrate()
-	await t.talk("", "[color=white]In a swift gesture, the man directs the Doctor’s eyes to his. They are eerily still. Staring far through the Doctor, and through the wall behind him.")
+	await t.talk("", "[color=white]In a swift gesture, the man directs the Doctor’s eyes to his. They are eerily still. Staring far through the Doctor, and through the wall behind him.", 0)
 	t.box.show()
-	await t.talk("[i]???", "Keep an eye out, Doctor. They’re always out to get you,")
+	await t.talk("[i]???", "Keep an eye out, Doctor. They’re always out to get you,", 0)
 	
 	narrate()
-	await t.talk("", "[color=white]The man leans forward.")
+	await t.talk("", "[color=white]The man leans forward.", 0)
 	t.box.show()
-	await t.talk("[i]???", "Scaling an operation, you’ll always have to keep that truth tucked neat when meeting anyone.")
-	await t.talk("Doctor", "Yes. I believe you’re right.")
-	await t.talk("[i]???", "In the 20th Century, only the paranoid survive.")
+	await t.talk("[i]???", "Scaling an operation, you’ll always have to keep that truth tucked neat when meeting anyone.", 0)
+	await t.talk("Doctor", "Yes. I believe you’re right.", 0)
+	await t.talk("[i]???", "In the 20th Century, only the paranoid survive.", 0)
 	
 	await wait(2.0)
 	

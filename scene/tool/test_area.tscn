@@ -307,7 +307,7 @@ y_sort_enabled = true
 scale = Vector2(1.81, 1.81)
 
 [node name="Nyra" parent="Entities" unique_id=624278877 instance=ExtResource("3_dl5wq")]
-position = Vector2(-136.46411, 845.8564)
+position = Vector2(504.4199, 920.9945)
 
 [node name="Camera2D" type="Camera2D" parent="Entities/Nyra" unique_id=959529032]
 offset = Vector2(0, -20.915)

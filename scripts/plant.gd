@@ -7,6 +7,6 @@ func _ready() -> void:
 	
 func _on_interact():
 	
-	await t.talk("", "It's hard to be a plant.")
-	await t.talk("", "You should know; you are one.")
+	await t.talk("", "It's hard to be a plant.", 0)
+	await t.talk("", "You should know; you are one.", 0)
 	

@@ -14,21 +14,21 @@ func _on_interact():
 	t.tune_option(1, "Floor 2")
 	t.tune_option(2, "Floor 3")
 	
-	t.options(2)
-	await t.talk("", "Which floor?")
+	#t.options(2)
+	await t.talk("", "Which floor?", 2)
 	
 	### here
 	
-	var answer = t.answer
+	var answer = t.array.answer
 	
 	match answer:
 		1: 
 			if can_enter:
 				await enter_elevator()
 			else:
-				await t.talk("", "You sadly have no reason to go up there.")
+				await t.talk("", "You sadly have no reason to go up there.", 0)
 			
-		2: await t.talk("", "Off limits.")
+		2: await t.talk("", "Off limits.", 0)
 	
 	return
 

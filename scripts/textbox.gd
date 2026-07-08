@@ -25,7 +25,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") and !array_visible:
 		emit_signal("advance")
 
-func talk(name: String, message: String):
+func talk(name: String, message: String, _options: int):
 	if name == "Nyra":
 		title.add_theme_color_override("default_color", Color(0.0, 0.0, 0.0, 1.0))
 	else:
@@ -40,9 +40,10 @@ func talk(name: String, message: String):
 	show()
 	await animation.animation_finished
 	can_move = false
-	finished.emit()
+	#finished.emit()
 	
-	await advance 
+	if _options > 0: await options(_options)
+	else: await advance 
 	
 	hide()
 	can_move = true
