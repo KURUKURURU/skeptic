@@ -15,9 +15,9 @@ func _on_interact():
 	
 	match message:
 		1:
-			await t.talk("Nyra", "Empty. Like a certain someone's soul.")
+			await t.talk("", "Empty. Like a certain someone's soul.")
 			return
 		2:
-			await t.talk("Nyra", "It's filled with broken ballpoint pens and styrofoam cups.")
-			await t.talk("Nyra", "And some gum.")
+			await t.talk("", "It's filled with broken ballpoint pens and styrofoam cups.")
+			await t.talk("", "And some gum.")
 			return

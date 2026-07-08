@@ -9,7 +9,7 @@ func _ready() -> void:
 	
 func _on_interact():
 	
-	await t.talk("Nyra", "They're watching me.")
+	await t.talk("", "They're watching you.")
 
 func _process(_delta):
 	if not is_instance_valid(player):

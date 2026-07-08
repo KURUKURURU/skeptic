@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bpar5gohcmlu2"]
+
+[ext_resource type="Script" uid="uid://dfjvkqy33t833" path="res://elevator_buttons.gd" id="1_05orm"]
+[ext_resource type="Texture2D" uid="uid://be3fquj6ccmqu" path="res://img/elevator.png" id="2_g66w8"]
+[ext_resource type="PackedScene" uid="uid://u4i77243adtd" path="res://scene/tool/interactable.tscn" id="3_gxh1m"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rld3j"]
+radius = 11.045361
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rxf60"]
+
+[node name="ElevatorButtons" type="StaticBody2D" unique_id=1490375965]
+texture_filter = 1
+script = ExtResource("1_05orm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=758618862]
+position = Vector2(0, -9)
+texture = ExtResource("2_g66w8")
+offset = Vector2(0, -34.095)
+hframes = 8
+vframes = 4
+frame = 12
+
+[node name="interactable" parent="." unique_id=574524158 instance=ExtResource("3_gxh1m")]
+interact_name = "Ride the Elevator?"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable" unique_id=1556131559]
+position = Vector2(0, -24)
+shape = SubResource("CircleShape2D_rld3j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2041332095]
+position = Vector2(0, -39)
+shape = SubResource("CircleShape2D_rxf60")

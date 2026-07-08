@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://dq06jirvt5ies"]
 
 [ext_resource type="Script" uid="uid://bi735boctqc5u" path="res://scripts/npc.gd" id="1_v1cxo"]
-[ext_resource type="SpriteFrames" uid="uid://c45l64cp1tcjp" path="res://img/spriteframes/nyra_spriteframes.tres" id="2_y3tbb"]
+[ext_resource type="SpriteFrames" uid="uid://bh52e410t6sg3" path="res://img/spriteframes/npc_spriteframes.tres" id="2_q75ou"]
 [ext_resource type="Script" uid="uid://8qqvvjkyxlva" path="res://scripts/states/state_machine.gd" id="3_rnkmb"]
 [ext_resource type="Script" uid="uid://cfje3puh636hb" path="res://scripts/states/NPC_Idle.gd" id="4_y3tbb"]
 [ext_resource type="Script" uid="uid://b3uxggijnrf0v" path="res://scripts/states/NPC_Move.gd" id="5_rnkmb"]
+[ext_resource type="Texture2D" uid="uid://dssh3ioutmr5x" path="res://img/dropshadow.png" id="6_83ano"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q75ou"]
 size = Vector2(44, 16)
@@ -20,8 +21,8 @@ shape = SubResource("RectangleShape2D_q75ou")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=728727981]
 scale = Vector2(1.141, 1.141)
-sprite_frames = ExtResource("2_y3tbb")
-animation = &"up"
+sprite_frames = ExtResource("2_q75ou")
+animation = &"down_2"
 offset = Vector2(0, -12.11)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=777764856]
@@ -39,3 +40,14 @@ metadata/_custom_type_script = "uid://cfje3puh636hb"
 script = ExtResource("5_rnkmb")
 NPC = NodePath("../..")
 metadata/_custom_type_script = "uid://b3uxggijnrf0v"
+
+[node name="drop" type="TextureRect" parent="." unique_id=175078291]
+self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 0.43137255)
+texture_filter = 1
+offset_left = -23.000002
+offset_top = -48.0
+offset_right = 26.999998
+offset_bottom = 20.0
+scale = Vector2(0.93124634, 1.0878494)
+mouse_filter = 2
+texture = ExtResource("6_83ano")

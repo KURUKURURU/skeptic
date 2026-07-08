@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bs1gl0tce8o1f" path="res://scripts/trashbin.gd" id="1_7e1q1"]
 [ext_resource type="PackedScene" uid="uid://u4i77243adtd" path="res://scene/tool/interactable.tscn" id="2_7e1q1"]
+[ext_resource type="Texture2D" uid="uid://dssh3ioutmr5x" path="res://img/dropshadow.png" id="2_bf3v3"]
 [ext_resource type="Texture2D" uid="uid://brqqa5g5m5geo" path="res://img/trashvertical.png" id="2_n6lif"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ogan6"]
@@ -13,6 +14,17 @@ radius = 9.0
 [node name="trash" type="StaticBody2D" unique_id=937812277]
 texture_filter = 1
 script = ExtResource("1_7e1q1")
+
+[node name="drop" type="TextureRect" parent="." unique_id=1601231592]
+self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 0.43137255)
+texture_filter = 1
+offset_left = -17.0
+offset_top = -48.000004
+offset_right = 33.0
+offset_bottom = 19.999996
+scale = Vector2(0.68134063, 1.0663593)
+mouse_filter = 2
+texture = ExtResource("2_bf3v3")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1179276970]
 texture = ExtResource("2_n6lif")

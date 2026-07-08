@@ -23,7 +23,6 @@ texture_filter = 1
 scale = Vector2(1.1409583, 1.1409583)
 sprite_frames = ExtResource("2_82qvb")
 animation = &"right_3"
-frame_progress = 0.91394573
 offset = Vector2(0, -13.205)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2070985840]

@@ -12,31 +12,42 @@ var last_position : Vector2
 var last_direction : String
 
 func _ready() -> void:
-	last_position = position
+	# Fixed: Uses global_position so it tracks map movement
+	last_position = global_position
 	
 func _physics_process(delta: float) -> void:
 	path_follow.progress += move_speed * delta
 	
-	var movement = position - last_position
+	# Fixed: Uses global_position to capture the actual path movement
+	var movement = global_position - last_position
 	if movement.length() > 0.1: 
 		_update_animation(movement) 
 		
-	last_position = position
+	last_position = global_position
 
 func _update_animation(movement: Vector2):
-	# Using the cleaner line format we discussed to fix the if/else overlaps
-	var anim_name := (
-		"right" if movement.x > 0.5  
-		else "left" if movement.x < -0.5
-		else "down" if movement.y > 0.5
-		else "up" if movement.y < -0.5
-		else last_direction
-	)
-	
-	last_direction = anim_name
-	
-	# If the NPC is supposed to be moving, play the walking animation
 	if moving:
-		sprite.play(anim_name)
+		# Checked individual directions first so they don't get skipped!
+		if movement.x > 0.5: 
+			sprite.play("right")
+			last_direction = "right"
+			
+		elif movement.x < -0.5: 
+			sprite.play("left")
+			last_direction = "left"
+			
+		elif movement.y > 0.5: 
+			sprite.play("down")
+			last_direction = "down"
+			
+		elif movement.y < -0.5: 
+			sprite.play("up")
+			last_direction = "up"
+			
+		else:
+			if !last_direction: last_direction = "down"
+			sprite.play(last_direction + "_2")
+	
 	else:
-		sprite.play(anim_name + "_2")
+		if !last_direction: last_direction = "down"
+		sprite.play(last_direction + "_2")
