@@ -7,10 +7,12 @@ extends CanvasLayer
 @onready var zap: AudioStreamPlayer = $zap
 @onready var box: NinePatchRect = $Box
 @onready var box_2: NinePatchRect = $Box2
+@onready var array: Node2D = $Array
 
 var can_move := true
 
 signal advance
+signal finished
 
 func _ready() -> void:
 	hide()
@@ -38,36 +40,18 @@ func talk(name: String, message: String):
 	show()
 	await animation.animation_finished
 	can_move = false
+	finished.emit()
 	
-	await advance
+	await advance 
 	
 	hide()
 	can_move = true
 	
 	return
 
-#func window(name: String, image: String):
-	#face.show()
-	#title.text = name
-	#
-	#if image == "" or image == null:
-		#name = "General"
-		#image = "default"
-		#
-	#var frank = "res://img/emotes/" + str(name) + "/" + str(image) + ".png"
-	#
-	#face.texture = load(frank)
-	#
-##func other_window(name: String, image: String):
-	##title.text = name
-	##
-	##if image == "" or image == null:
-		##name = "General"
-		##image = "default"
-		##
-	##var frank = "res://img/emotes/" + str(name) + "/" + str(image) + ".png"
-	##
-	##other.texture = load(frank)
-#
-##func other_window_reset():
-	##other.texture = load("")
+func _options(amount: int):
+	array._ask(amount)
+
+
+func _on_array_finished() -> void:
+	advance.emit()

@@ -8,6 +8,7 @@
 [ext_resource type="FontFile" uid="uid://cnk3lw1v0o663" path="res://tff/NotJamMonoClean13/Not Jam Mono Clean 13.ttf" id="7_22sdc"]
 [ext_resource type="FontFile" uid="uid://ju5f3ke20gxn" path="res://tff/Old Fax.ttf" id="7_h12o4"]
 [ext_resource type="AudioStream" uid="uid://ctdr7fl8xlgi3" path="res://sfx/zap.wav" id="7_v5p5v"]
+[ext_resource type="PackedScene" uid="uid://dyulkdxw25yni" path="res://scene/Entities/option/array.tscn" id="9_22sdc"]
 
 [sub_resource type="Theme" id="Theme_mm2br"]
 RichTextLabel/colors/default_color = Color(0.34117648, 0, 0, 1)
@@ -149,3 +150,10 @@ libraries/ = SubResource("AnimationLibrary_h12o4")
 [node name="zap" type="AudioStreamPlayer" parent="." unique_id=786869910]
 stream = ExtResource("7_v5p5v")
 volume_db = -13.684
+
+[node name="Array" parent="." unique_id=803661810 node_paths=PackedStringArray("textbox") instance=ExtResource("9_22sdc")]
+position = Vector2(1058, 834)
+amount = 0
+textbox = NodePath("..")
+
+[connection signal="finished" from="Array" to="." method="_on_array_finished"]

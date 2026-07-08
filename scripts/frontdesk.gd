@@ -7,8 +7,7 @@ func _ready() -> void:
 	
 func _on_interact():
 	
+	t._options(3)
 	await t.talk("Nyra", "Time for the night shift.")
-	await t.talk("Nyra", "...")
-	await t.talk("Business Woman", "Yeah.")
-	await t.talk("Business Woman", "...")
+	
 	

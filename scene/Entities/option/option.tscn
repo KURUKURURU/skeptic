@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://di0xcsedf2ijf"]
+
+[ext_resource type="Texture2D" uid="uid://cc315sjfah1jq" path="res://img/9slice.png" id="1_ni0xe"]
+[ext_resource type="FontFile" uid="uid://r8c8uvw8ubvb" path="res://tff/NotJamSlabSerif11/NotJamSlabSerif11.ttf" id="2_x3h5g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3f5hn"]
+
+[sub_resource type="Theme" id="Theme_rxf60"]
+Button/colors/font_color = Color(0.27784514, 0.008238353, 2.4065375e-08, 1)
+Button/colors/font_hover_color = Color(0.87513113, 0.3202906, 0, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/font_sizes/font_size = 26
+Button/fonts/font = ExtResource("2_x3h5g")
+Button/styles/disabled = SubResource("StyleBoxEmpty_3f5hn")
+Button/styles/focus = SubResource("StyleBoxEmpty_3f5hn")
+Button/styles/hover = SubResource("StyleBoxEmpty_3f5hn")
+Button/styles/hover_mirrored = SubResource("StyleBoxEmpty_3f5hn")
+Button/styles/hover_pressed = SubResource("StyleBoxEmpty_3f5hn")
+Button/styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_3f5hn")
+Button/styles/normal = SubResource("StyleBoxEmpty_3f5hn")
+Button/styles/pressed = SubResource("StyleBoxEmpty_3f5hn")
+
+[node name="Option" type="Control" unique_id=623114960]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1595487870]
+texture_filter = 3
+layout_mode = 0
+offset_left = 1.0
+offset_top = -39.0
+offset_right = 184.13022
+offset_bottom = -8.0
+scale = Vector2(3.118, 3.118)
+texture = ExtResource("1_ni0xe")
+patch_margin_left = 19
+patch_margin_top = 13
+patch_margin_right = 35
+patch_margin_bottom = 18
+
+[node name="Button" type="Button" parent="." unique_id=1553366749]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -30.0
+offset_right = 995.05505
+offset_bottom = 117.827805
+scale = Vector2(0.5749933, 0.5749933)
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.745, 0.745)
+theme = SubResource("Theme_rxf60")
+theme_override_font_sizes/font_size = 86
+text = "blank"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

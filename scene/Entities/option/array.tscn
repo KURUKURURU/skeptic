@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dyulkdxw25yni"]
+
+[ext_resource type="Script" uid="uid://d3d53awbv8hax" path="res://scene/Entities/option/array.gd" id="1_xfa02"]
+[ext_resource type="PackedScene" uid="uid://di0xcsedf2ijf" path="res://scene/Entities/option/option.tscn" id="2_n61by"]
+
+[node name="Array" type="Node2D" unique_id=803661810]
+script = ExtResource("1_xfa02")
+
+[node name="container" type="VBoxContainer" parent="." unique_id=698592840]
+offset_left = 6.0
+offset_top = -474.0
+offset_right = 46.0
+offset_bottom = -71.0
+theme_override_constants/separation = 108
+alignment = 2
+
+[node name="Option1" parent="container" unique_id=623114960 instance=ExtResource("2_n61by")]
+layout_mode = 2
+
+[node name="Option2" parent="container" unique_id=2025175910 instance=ExtResource("2_n61by")]
+layout_mode = 2
+
+[node name="Option3" parent="container" unique_id=1169984525 instance=ExtResource("2_n61by")]
+layout_mode = 2
+
+[node name="Option4" parent="container" unique_id=2085488263 instance=ExtResource("2_n61by")]
+layout_mode = 2

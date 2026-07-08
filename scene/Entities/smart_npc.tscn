@@ -19,7 +19,8 @@ disabled = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=98754809]
 scale = Vector2(1.141, 1.141)
 sprite_frames = ExtResource("2_j0wgl")
-animation = &"right"
+animation = &"left"
+frame_progress = 0.7765939
 offset = Vector2(0, -12.11)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1250307482]
