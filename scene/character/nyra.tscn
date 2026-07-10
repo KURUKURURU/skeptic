@@ -20,7 +20,7 @@ speed = 200
 
 [node name="animation" type="AnimatedSprite2D" parent="." unique_id=796319765]
 texture_filter = 1
-scale = Vector2(1.1409583, 1.1409583)
+scale = Vector2(1.211, 1.211)
 sprite_frames = ExtResource("2_82qvb")
 animation = &"right_3"
 offset = Vector2(0, -13.205)

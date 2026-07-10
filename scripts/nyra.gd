@@ -1,16 +1,30 @@
 extends CharacterBody2D
 @onready var animation = $animation
 @onready var steps = $steps
+
+@export var camera : Camera2D 
 @export var speed = 300 
 
 var last_direction
 var is_moving := false
+
+func teleport_to_spawn():
+	#global_position = position
+	
+	camera.position_smoothing_enabled = false
+	
+	camera.reset_smoothing()
+	
+	await get_tree().process_frame
+	camera.position_smoothing_enabled = true
 
 var moving:
 	get:
 		return t.can_move
 
 func _process(delta: float) -> void:
+	
+	#if camera: camera.position = position
 	
 	if Input.is_action_pressed("shift"):
 		speed = 300

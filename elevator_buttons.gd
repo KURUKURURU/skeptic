@@ -40,14 +40,17 @@ func _on_interact():
 				await cancel()
 				return
 	
-	for i in range(Global.current_floor, answer):
+	var step = 1 if answer > Global.current_floor else -1
+
+	for i in range(Global.current_floor, answer + step, step):
 		await elevator.set_level(i)
-	
-	await elevator.open()
-	await wait(0.5)
-	get_tree().change_scene_to_file("res://scene/scene/floor_" + str(answer) + ".tscn")
-	
-	return
+		
+		Global.elevator_used = true
+		await elevator.open()
+		await wait(0.5)
+		get_tree().change_scene_to_file("res://scene/scene/floor_" + str(answer) + ".tscn")
+		
+		return
 
 func cancel():
 	await t.talk("", "Can't go there.", 0)
