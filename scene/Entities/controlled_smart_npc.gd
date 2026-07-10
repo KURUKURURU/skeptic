@@ -14,19 +14,19 @@ var movement
 
 func _pause():
 	moving = false
-	return
 	
 func _continue():
 	path_follow.progress_ratio = 0.0
+	last_position = global_position
 	moving = true
-	return
 	
 
 func _ready() -> void:
 	last_position = global_position
 	
-func _physics_process(delta: float) -> void:
-	
+func _physics_process(delta):
+	#print("MOVING:", moving, " POS:", global_position, " PROGRESS:", path_follow.progress_ratio)
+
 	if moving:
 		path_follow.progress += move_speed * delta
 	else: _update_animation(movement) 

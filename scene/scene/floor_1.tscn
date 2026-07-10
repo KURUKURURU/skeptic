@@ -1,31 +1,31 @@
 [gd_scene format=4 uid="uid://dg2sd46gbm3f"]
 
-[ext_resource type="Texture2D" uid="uid://8y5wmjok7i3p" path="res://img/Pixel Life - Desk Essentials/spritesheet.png" id="1_ip1th"]
-[ext_resource type="Script" uid="uid://c3upxln30c1hp" path="res://scripts/test_area.gd" id="1_t8i87"]
-[ext_resource type="Texture2D" uid="uid://b3pug1k5v5bgs" path="res://img/office_maps/office_mapf.png" id="2_hrtff"]
-[ext_resource type="Texture2D" uid="uid://cjedb0ww277u5" path="res://img/wallsTile.png" id="2_t8i87"]
-[ext_resource type="PackedScene" uid="uid://ce2veelvo8cfp" path="res://scene/character/nyra.tscn" id="3_dl5wq"]
-[ext_resource type="Texture2D" uid="uid://ctywl2mg604je" path="res://img/theoffice.png" id="4_ve6uf"]
-[ext_resource type="PackedScene" uid="uid://c02j8xi70jfl3" path="res://scene/Entities/table.tscn" id="5_dl5wq"]
-[ext_resource type="PackedScene" uid="uid://dl7w0bxc42jlw" path="res://scene/Entities/frontdesk.tscn" id="7_fbwr2"]
-[ext_resource type="PackedScene" uid="uid://mex3xfsq160u" path="res://scene/Entities/plant.tscn" id="9_5npjl"]
-[ext_resource type="PackedScene" uid="uid://ddipobvylmpy3" path="res://scene/Entities/puddle.tscn" id="10_qidl4"]
-[ext_resource type="AudioStream" uid="uid://bom55clupw6ur" path="res://sfx/office.wav" id="11_ve6uf"]
-[ext_resource type="Texture2D" uid="uid://be3fquj6ccmqu" path="res://img/elevator.png" id="12_a5q4k"]
-[ext_resource type="AudioStream" uid="uid://b1uk8e48wjbeo" path="res://sfx/peopletalking.mp3" id="12_g8jak"]
-[ext_resource type="PackedScene" uid="uid://yb50sx7d6e7h" path="res://scene/Entities/painting.tscn" id="12_j8led"]
-[ext_resource type="PackedScene" uid="uid://dpwhgg4w6tq2o" path="res://scene/Entities/security_camera.tscn" id="12_m836i"]
-[ext_resource type="PackedScene" uid="uid://caiksosy6vwdh" path="res://scene/Entities/trashbin.tscn" id="13_j8led"]
-[ext_resource type="PackedScene" uid="uid://dq06jirvt5ies" path="res://scene/Entities/npc.tscn" id="14_yfd60"]
-[ext_resource type="PackedScene" uid="uid://cj51xh04d60td" path="res://scene/Entities/smart_npc.tscn" id="15_xd2lx"]
-[ext_resource type="PackedScene" uid="uid://c7yojo2gdldee" path="res://scene/Entities/elevator.tscn" id="16_4xese"]
-[ext_resource type="PackedScene" uid="uid://bpar5gohcmlu2" path="res://scene/Entities/elevator_buttons.tscn" id="17_a5q4k"]
-[ext_resource type="Curve2D" uid="uid://c7wtva2u6luwi" path="res://paths/enter_elevator.tres" id="17_mbim4"]
-[ext_resource type="Script" uid="uid://c4crimqrm4ba8" path="res://scene/tool/elevator_npc.gd" id="18_4q7ge"]
-[ext_resource type="Script" uid="uid://td011bokkoqu" path="res://scene/Entities/controlled_smart_npc.gd" id="19_4q7ge"]
+[ext_resource type="Script" uid="uid://c3upxln30c1hp" path="res://scripts/floor_1.gd" id="1_am7rc"]
+[ext_resource type="Texture2D" uid="uid://b3pug1k5v5bgs" path="res://img/office_maps/office_mapf.png" id="2_gwsch"]
+[ext_resource type="Texture2D" uid="uid://8y5wmjok7i3p" path="res://img/Pixel Life - Desk Essentials/spritesheet.png" id="3_j14y1"]
+[ext_resource type="Texture2D" uid="uid://ctywl2mg604je" path="res://img/theoffice.png" id="4_0s821"]
+[ext_resource type="Texture2D" uid="uid://cjedb0ww277u5" path="res://img/wallsTile.png" id="5_j2syg"]
+[ext_resource type="PackedScene" uid="uid://ce2veelvo8cfp" path="res://scene/character/nyra.tscn" id="6_t8myt"]
+[ext_resource type="PackedScene" uid="uid://c02j8xi70jfl3" path="res://scene/Entities/table.tscn" id="7_u1ybv"]
+[ext_resource type="PackedScene" uid="uid://dl7w0bxc42jlw" path="res://scene/Entities/frontdesk.tscn" id="8_x4sdk"]
+[ext_resource type="PackedScene" uid="uid://mex3xfsq160u" path="res://scene/Entities/plant.tscn" id="9_wq5lc"]
+[ext_resource type="PackedScene" uid="uid://ddipobvylmpy3" path="res://scene/Entities/puddle.tscn" id="10_ibhgh"]
+[ext_resource type="PackedScene" uid="uid://yb50sx7d6e7h" path="res://scene/Entities/painting.tscn" id="11_sggiv"]
+[ext_resource type="Texture2D" uid="uid://be3fquj6ccmqu" path="res://img/elevator.png" id="12_qfvfy"]
+[ext_resource type="PackedScene" uid="uid://dpwhgg4w6tq2o" path="res://scene/Entities/security_camera.tscn" id="13_q6lrw"]
+[ext_resource type="PackedScene" uid="uid://caiksosy6vwdh" path="res://scene/Entities/trashbin.tscn" id="14_kqisi"]
+[ext_resource type="PackedScene" uid="uid://dq06jirvt5ies" path="res://scene/Entities/npc.tscn" id="15_d28da"]
+[ext_resource type="PackedScene" uid="uid://cj51xh04d60td" path="res://scene/Entities/smart_npc.tscn" id="16_nkgk0"]
+[ext_resource type="Curve2D" uid="uid://c7wtva2u6luwi" path="res://paths/enter_elevator.tres" id="17_ea5gh"]
+[ext_resource type="Script" uid="uid://c4crimqrm4ba8" path="res://scene/tool/elevator_npc.gd" id="18_75sjg"]
+[ext_resource type="Script" uid="uid://td011bokkoqu" path="res://scene/Entities/controlled_smart_npc.gd" id="19_norx8"]
+[ext_resource type="PackedScene" uid="uid://bpar5gohcmlu2" path="res://scene/Entities/elevator_buttons.tscn" id="20_e0iwd"]
+[ext_resource type="PackedScene" uid="uid://c7yojo2gdldee" path="res://scene/Entities/elevator.tscn" id="21_masyi"]
+[ext_resource type="AudioStream" uid="uid://bom55clupw6ur" path="res://sfx/office.wav" id="22_jfndi"]
+[ext_resource type="AudioStream" uid="uid://b1uk8e48wjbeo" path="res://sfx/peopletalking.mp3" id="23_sj3py"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hrtff"]
-texture = ExtResource("2_hrtff")
+texture = ExtResource("2_gwsch")
 texture_region_size = Vector2i(50, 50)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-25.714287, -8.571428, 25.714287, -8.571428, 25.714287, 25.714287, -25.714287, 25.714287)
@@ -94,7 +94,7 @@ texture_region_size = Vector2i(50, 50)
 3:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fam6o"]
-texture = ExtResource("1_ip1th")
+texture = ExtResource("3_j14y1")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/y_sort_origin = 13
@@ -106,7 +106,7 @@ texture_region_size = Vector2i(32, 32)
 3:1/0/y_sort_origin = 13
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qidl4"]
-texture = ExtResource("4_ve6uf")
+texture = ExtResource("4_0s821")
 texture_region_size = Vector2i(50, 50)
 1:0/0 = 0
 2:0/0 = 0
@@ -203,7 +203,7 @@ texture_region_size = Vector2i(50, 50)
 6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-25, -25, -25, -10.714286, 25, -10.714286, 25, -25)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbwr2"]
-texture = ExtResource("2_t8i87")
+texture = ExtResource("5_j2syg")
 texture_region_size = Vector2i(40, 40)
 0:1/0 = 0
 0:1/0/y_sort_origin = 40
@@ -252,11 +252,11 @@ sources/0 = SubResource("TileSetAtlasSource_hrtff")
 sources/3 = SubResource("TileSetAtlasSource_qidl4")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rxf60"]
-atlas = ExtResource("12_a5q4k")
+atlas = ExtResource("12_qfvfy")
 region = Rect2(304.1092, 201.28955, 42.024216, 61.92286)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qaqwb"]
-atlas = ExtResource("12_a5q4k")
+atlas = ExtResource("12_qfvfy")
 region = Rect2(255.53073, 124.18088, 42.024216, 61.92286)
 
 [sub_resource type="Curve2D" id="Curve2D_xd2lx"]
@@ -267,7 +267,7 @@ point_count = 7
 
 [node name="TestArea" type="Node2D" unique_id=798318388]
 y_sort_enabled = true
-script = ExtResource("1_t8i87")
+script = ExtResource("1_am7rc")
 cutscene = false
 
 [node name="TileMapLayers" type="Node2D" parent="." unique_id=1093075241]
@@ -309,7 +309,7 @@ tile_set = SubResource("TileSet_hrtff")
 y_sort_enabled = true
 scale = Vector2(1.81, 1.81)
 
-[node name="Nyra" parent="Entities" unique_id=624278877 instance=ExtResource("3_dl5wq")]
+[node name="Nyra" parent="Entities" unique_id=624278877 instance=ExtResource("6_t8myt")]
 position = Vector2(-150.82874, 823.20447)
 
 [node name="Camera2D" type="Camera2D" parent="Entities/Nyra" unique_id=959529032]
@@ -321,39 +321,39 @@ limit_right = 2398
 limit_bottom = 2529
 position_smoothing_enabled = true
 
-[node name="Table" parent="Entities" unique_id=937812277 instance=ExtResource("5_dl5wq")]
+[node name="Table" parent="Entities" unique_id=937812277 instance=ExtResource("7_u1ybv")]
 visible = false
 position = Vector2(697.79004, 285.0829)
 
-[node name="frontdesk" parent="Entities" unique_id=108257003 instance=ExtResource("7_fbwr2")]
+[node name="frontdesk" parent="Entities" unique_id=108257003 instance=ExtResource("8_x4sdk")]
 position = Vector2(546.9613, 871.27075)
 
-[node name="plant" parent="Entities" unique_id=820684429 instance=ExtResource("9_5npjl")]
+[node name="plant" parent="Entities" unique_id=820684429 instance=ExtResource("9_wq5lc")]
 position = Vector2(380.663, 801.105)
 
-[node name="plant2" parent="Entities" unique_id=1909926186 instance=ExtResource("9_5npjl")]
+[node name="plant2" parent="Entities" unique_id=1909926186 instance=ExtResource("9_wq5lc")]
 position = Vector2(706.6298, 801.105)
 
-[node name="plant4" parent="Entities" unique_id=576639818 instance=ExtResource("9_5npjl")]
+[node name="plant4" parent="Entities" unique_id=576639818 instance=ExtResource("9_wq5lc")]
 position = Vector2(398.89505, 987.84534)
 
-[node name="plant5" parent="Entities" unique_id=477028223 instance=ExtResource("9_5npjl")]
+[node name="plant5" parent="Entities" unique_id=477028223 instance=ExtResource("9_wq5lc")]
 position = Vector2(680.663, 1207.7349)
 
-[node name="plant3" parent="Entities" unique_id=656227502 instance=ExtResource("9_5npjl")]
+[node name="plant3" parent="Entities" unique_id=656227502 instance=ExtResource("9_wq5lc")]
 position = Vector2(919.33704, 697.7901)
 
-[node name="puddle" parent="Entities" unique_id=1691734723 instance=ExtResource("10_qidl4")]
+[node name="puddle" parent="Entities" unique_id=1691734723 instance=ExtResource("10_ibhgh")]
 position = Vector2(603.86743, 1018.23206)
 
-[node name="puddle2" parent="Entities" unique_id=170847982 instance=ExtResource("10_qidl4")]
+[node name="puddle2" parent="Entities" unique_id=170847982 instance=ExtResource("10_ibhgh")]
 position = Vector2(923.75696, 762.43097)
 
-[node name="puddle3" parent="Entities" unique_id=1005441009 instance=ExtResource("10_qidl4")]
+[node name="puddle3" parent="Entities" unique_id=1005441009 instance=ExtResource("10_ibhgh")]
 position = Vector2(340.88397, 713.81213)
 scale = Vector2(-1, 1)
 
-[node name="talk_alert" parent="Entities" unique_id=1158920270 instance=ExtResource("12_j8led")]
+[node name="talk_alert" parent="Entities" unique_id=1158920270 instance=ExtResource("11_sggiv")]
 position = Vector2(72.92818, 765.19336)
 tag = "Floor 1"
 message = 3
@@ -367,55 +367,55 @@ position = Vector2(-8.430271e-06, -0.99166965)
 scale = Vector2(0.815403, 0.815403)
 texture = SubResource("AtlasTexture_qaqwb")
 
-[node name="talk_alert2" parent="Entities" unique_id=1708695725 instance=ExtResource("12_j8led")]
+[node name="talk_alert2" parent="Entities" unique_id=1708695725 instance=ExtResource("11_sggiv")]
 position = Vector2(1160.2211, 779.55804)
 tag = "Weird Painting"
 message = 1
 
-[node name="talk_alert3" parent="Entities" unique_id=1938082396 instance=ExtResource("12_j8led")]
+[node name="talk_alert3" parent="Entities" unique_id=1938082396 instance=ExtResource("11_sggiv")]
 position = Vector2(546.96136, 759.116)
 tag = "[i]Eden Labs"
 
-[node name="SecurityCamera" parent="Entities" unique_id=1165677714 node_paths=PackedStringArray("player") instance=ExtResource("12_m836i")]
+[node name="SecurityCamera" parent="Entities" unique_id=1165677714 node_paths=PackedStringArray("player") instance=ExtResource("13_q6lrw")]
 position = Vector2(1018.78455, 745.3039)
 player = NodePath("../Nyra")
 
-[node name="SecurityCamera2" parent="Entities" unique_id=877749824 node_paths=PackedStringArray("player") instance=ExtResource("12_m836i")]
+[node name="SecurityCamera2" parent="Entities" unique_id=877749824 node_paths=PackedStringArray("player") instance=ExtResource("13_q6lrw")]
 position = Vector2(670.71826, 745.3039)
 player = NodePath("../Nyra")
 
-[node name="SecurityCamera3" parent="Entities" unique_id=2030923279 node_paths=PackedStringArray("player") instance=ExtResource("12_m836i")]
+[node name="SecurityCamera3" parent="Entities" unique_id=2030923279 node_paths=PackedStringArray("player") instance=ExtResource("13_q6lrw")]
 position = Vector2(134.25415, 745.3039)
 player = NodePath("../Nyra")
 
-[node name="trash" parent="Entities" unique_id=271530276 instance=ExtResource("13_j8led")]
+[node name="trash" parent="Entities" unique_id=271530276 instance=ExtResource("14_kqisi")]
 position = Vector2(487.29285, 871.27075)
 
-[node name="trash2" parent="Entities" unique_id=1924890925 instance=ExtResource("13_j8led")]
+[node name="trash2" parent="Entities" unique_id=1924890925 instance=ExtResource("14_kqisi")]
 position = Vector2(655.80115, 955.24866)
 message = 2
 
-[node name="trash3" parent="Entities" unique_id=90830140 instance=ExtResource("13_j8led")]
+[node name="trash3" parent="Entities" unique_id=90830140 instance=ExtResource("14_kqisi")]
 position = Vector2(1128.7294, 809.94476)
 message = 2
 
-[node name="puddle4" parent="Entities" unique_id=833274941 instance=ExtResource("10_qidl4")]
+[node name="puddle4" parent="Entities" unique_id=833274941 instance=ExtResource("10_ibhgh")]
 position = Vector2(183.9779, 423.2044)
 metadata/_scene_painted = true
 
-[node name="puddle5" parent="Entities" unique_id=533429661 instance=ExtResource("10_qidl4")]
+[node name="puddle5" parent="Entities" unique_id=533429661 instance=ExtResource("10_ibhgh")]
 position = Vector2(340.89334, 285.46066)
 metadata/_scene_painted = true
 
-[node name="puddle6" parent="Entities" unique_id=618527664 instance=ExtResource("10_qidl4")]
+[node name="puddle6" parent="Entities" unique_id=618527664 instance=ExtResource("10_ibhgh")]
 position = Vector2(761.76764, 367.42868)
 metadata/_scene_painted = true
 
-[node name="puddle7" parent="Entities" unique_id=103627306 instance=ExtResource("10_qidl4")]
+[node name="puddle7" parent="Entities" unique_id=103627306 instance=ExtResource("10_ibhgh")]
 position = Vector2(17.127075, 801.10504)
 metadata/_scene_painted = true
 
-[node name="NPC" parent="Entities" unique_id=2085148079 instance=ExtResource("14_yfd60")]
+[node name="NPC" parent="Entities" unique_id=2085148079 instance=ExtResource("15_d28da")]
 position = Vector2(496.68512, 1223.7571)
 
 [node name="RandomNPC" type="Path2D" parent="Entities" unique_id=718482937]
@@ -427,7 +427,7 @@ y_sort_enabled = true
 position = Vector2(593.9227, 1229.2819)
 rotates = false
 
-[node name="SmartNPC" parent="Entities/RandomNPC/PathFollow2D" unique_id=1809051609 node_paths=PackedStringArray("path_follow", "path") instance=ExtResource("15_xd2lx")]
+[node name="SmartNPC" parent="Entities/RandomNPC/PathFollow2D" unique_id=1809051609 node_paths=PackedStringArray("path_follow", "path") instance=ExtResource("16_nkgk0")]
 y_sort_enabled = true
 position = Vector2(-4.2915344e-05, -6.1035156e-05)
 scale = Vector2(1.0000001, 1.0000001)
@@ -439,8 +439,8 @@ metadata/_scene_painted = true
 
 [node name="ElevatorNPC" type="Path2D" parent="Entities" unique_id=1906268 node_paths=PackedStringArray("elevator")]
 y_sort_enabled = true
-curve = ExtResource("17_mbim4")
-script = ExtResource("18_4q7ge")
+curve = ExtResource("17_ea5gh")
+script = ExtResource("18_75sjg")
 elevator = NodePath("../Elevator2")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Entities/ElevatorNPC" unique_id=581929923]
@@ -450,53 +450,53 @@ progress = 99.99992
 rotates = false
 loop = false
 
-[node name="SmartNPC" parent="Entities/ElevatorNPC/PathFollow2D" unique_id=1876042050 node_paths=PackedStringArray("path_follow", "path") instance=ExtResource("15_xd2lx")]
+[node name="SmartNPC" parent="Entities/ElevatorNPC/PathFollow2D" unique_id=1876042050 node_paths=PackedStringArray("path_follow", "path") instance=ExtResource("16_nkgk0")]
 y_sort_enabled = true
 position = Vector2(-4.2915344e-05, -6.1035156e-05)
 scale = Vector2(1.0000001, 1.0000001)
 motion_mode = 1
-script = ExtResource("19_4q7ge")
+script = ExtResource("19_norx8")
 path_follow = NodePath("..")
 path = NodePath("../..")
 metadata/_scene_painted = true
 
-[node name="ElevatorButtons" parent="Entities" unique_id=1891147331 node_paths=PackedStringArray("elevator") instance=ExtResource("17_a5q4k")]
+[node name="ElevatorButtons" parent="Entities" unique_id=1891147331 node_paths=PackedStringArray("elevator") instance=ExtResource("20_e0iwd")]
 position = Vector2(-136.4641, 804.42)
 scale = Vector2(1.0000002, 1.0000002)
 elevator = NodePath("../Elevator")
 
-[node name="Elevator" parent="Entities" unique_id=536209988 instance=ExtResource("16_4xese")]
+[node name="Elevator" parent="Entities" unique_id=536209988 instance=ExtResource("21_masyi")]
 position = Vector2(-66.85083, 761.8785)
 
-[node name="Elevator2" parent="Entities" unique_id=169483348 instance=ExtResource("16_4xese")]
+[node name="Elevator2" parent="Entities" unique_id=169483348 instance=ExtResource("21_masyi")]
 position = Vector2(-208.28731, 761.8785)
 
 [node name="Noise" type="Node2D" parent="." unique_id=1785445178]
 
 [node name="Office" type="AudioStreamPlayer2D" parent="Noise" unique_id=97503992]
 position = Vector2(334, 829)
-stream = ExtResource("11_ve6uf")
+stream = ExtResource("22_jfndi")
 volume_db = 10.593
 autoplay = true
 bus = &"bg"
 
 [node name="Office2" type="AudioStreamPlayer2D" parent="Noise" unique_id=1646823280]
 position = Vector2(1576, 924)
-stream = ExtResource("11_ve6uf")
+stream = ExtResource("22_jfndi")
 volume_db = 10.593
 autoplay = true
 bus = &"bg"
 
 [node name="People" type="AudioStreamPlayer2D" parent="Noise" unique_id=1498093241]
 position = Vector2(1453, 829)
-stream = ExtResource("12_g8jak")
+stream = ExtResource("23_sj3py")
 volume_db = 10.593
 autoplay = true
 bus = &"bg"
 
 [node name="People2" type="AudioStreamPlayer2D" parent="Noise" unique_id=1279157305]
 position = Vector2(433, 924)
-stream = ExtResource("12_g8jak")
+stream = ExtResource("23_sj3py")
 volume_db = 10.593
 autoplay = true
 bus = &"bg"

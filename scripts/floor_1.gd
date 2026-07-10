@@ -6,6 +6,8 @@ var bus_bg = AudioServer.get_bus_index("bg")
 
 func _ready() -> void:
 	
+	Global.current_floor = 1
+	
 	if cutscene:
 		AudioServer.set_bus_mute(bus_bg, true)
 		await Cutscene.scene("Open")

@@ -69,9 +69,9 @@ func __open():
 
 func __frontdesk():
 	img.play("default")
-	await t.talk("Nyra", "Time for the night shift.")
+	await t.talk("Nyra", "Time for the night shift.", 0)
 	img.frame += 1
-	await t.talk("Nyra", "Anyways...")
+	await t.talk("Nyra", "Anyways...", 0)
 	await wait(1.0)
 
 func wait(seconds: float) -> void:
