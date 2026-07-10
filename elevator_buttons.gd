@@ -6,6 +6,10 @@ extends StaticBody2D
 
 var can_enter : bool = true
 
+var answer:
+	get: 
+		return t.array.answer
+
 func _ready() -> void:
 	interactable.interact = _on_interact
 	
@@ -20,7 +24,7 @@ func _on_interact():
 	
 	### here
 	
-	var answer = t.array.answer
+	
 	
 	if answer == Global.current_floor:
 		await t.talk("", "You're already there stupid.", 0)
@@ -42,15 +46,16 @@ func _on_interact():
 	
 	var step = 1 if answer > Global.current_floor else -1
 
-	for i in range(Global.current_floor, answer + step, step):
+	for i in range(answer, Global.current_floor +1, step):
 		await elevator.set_level(i)
 		
-		Global.elevator_used = true
-		await elevator.open()
-		await wait(0.5)
-		get_tree().change_scene_to_file("res://scene/scene/floor_" + str(answer) + ".tscn")
+	Global.elevator_used = true
+	
+	await elevator.open()
+	await wait(0.5)
+	get_tree().change_scene_to_file("res://scene/scene/floor_" + str(answer) + ".tscn")
 		
-		return
+	return
 
 func cancel():
 	await t.talk("", "Can't go there.", 0)
@@ -58,3 +63,9 @@ func cancel():
 
 func wait(seconds: float) -> void:
 	await get_tree().create_timer(seconds).timeout
+
+func tween_level():
+	var step = 1 if answer > Global.current_floor else -1
+
+	for i in range(answer, Global.current_floor +1, step):
+		await elevator.set_level(i)

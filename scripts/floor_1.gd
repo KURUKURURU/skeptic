@@ -7,6 +7,7 @@ extends Node2D
 var bus_bg = AudioServer.get_bus_index("bg")
 
 func _ready() -> void:
+	Global.current_floor = 1
 	main_elevator.set_level(Global.current_floor)
 	nyra.teleport_to_spawn()
 	nyra.show()

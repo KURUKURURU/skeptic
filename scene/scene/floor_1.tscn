@@ -311,7 +311,7 @@ y_sort_enabled = true
 scale = Vector2(1.81, 1.81)
 
 [node name="Nyra" parent="Entities" unique_id=624278877 node_paths=PackedStringArray("camera") instance=ExtResource("6_t8myt")]
-position = Vector2(539.22656, 1165.7458)
+position = Vector2(-136.46411, 833.1492)
 camera = NodePath("Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="Entities/Nyra" unique_id=959529032]

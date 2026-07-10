@@ -132,7 +132,7 @@ texture_region_size = Vector2i(50, 50)
 4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-17.857143, 17.857143, 17.857143, 17.857143, 17.857143, -53.571426, -17.857143, -53.571426)
 0:5/0 = 0
 0:5/0/y_sort_origin = 3
-0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-25, 3.5714283, 25, 3.5714283, 25, 25, -25, 25)
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-17.857143, 3.5714283, 25, 3.5714283, 25, 17.857143, -17.857143, 17.857143)
 0:6/0 = 0
 1:6/0 = 0
 0:7/0 = 0
@@ -179,7 +179,7 @@ texture_region_size = Vector2i(50, 50)
 2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-17.857143, -25, -17.857143, 10.714287, 10.714287, 10.714287, 10.714287, -25)
 1:5/0 = 0
 1:5/0/y_sort_origin = 3
-1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-25, 3.5714283, 25, 3.5714283, 25, 25, -25, 25)
+1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-25, 3.5714283, 17.857143, 3.5714283, 17.857143, 17.857143, -25, 17.857143)
 3:5/0 = 0
 3:5/0/y_sort_origin = -26
 3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-17.857143, -25, -17.857143, 25, 17.857143, 25, 17.857143, -25)
@@ -413,7 +413,7 @@ position = Vector2(212.1547, 168.50829)
 player = NodePath("../Nyra")
 
 [node name="plant" parent="Entities" unique_id=316125841 instance=ExtResource("16_otmqu")]
-position = Vector2(-673.4807, 737.0166)
+position = Vector2(-648.61884, 737.0166)
 
 [node name="plant2" parent="Entities" unique_id=1971395519 instance=ExtResource("16_otmqu")]
 position = Vector2(-301.65747, 801.6575)

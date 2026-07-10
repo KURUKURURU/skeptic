@@ -51,12 +51,13 @@ func enter():
 
 	smart_npc._pause()
 	#smart_npc.moving = true
-	
-	print("Going to floor 2")
-	await elevator.set_level(2)
-
-	print("Going to floor 1")
-	await elevator.set_level(1)
+	match Global.current_floor:
+		1:
+			await elevator.set_level(2)
+			await elevator.set_level(1)
+		2:
+			await elevator.set_level(1)
+			await elevator.set_level(2)
 
 	await elevator.open()
 	
@@ -76,8 +77,13 @@ func enter():
 	smart_npc._pause()
 	await elevator.close()
 
-	await elevator.set_level(1)
-	await elevator.set_level(2)
+	match Global.current_floor:
+		1:
+			await elevator.set_level(1)
+			await elevator.set_level(2)
+		2:
+			await elevator.set_level(2)
+			await elevator.set_level(1)
 
 	print("End")
 	path_follow.progress_ratio = 0.0
