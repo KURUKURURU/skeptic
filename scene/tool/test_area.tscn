@@ -445,7 +445,7 @@ elevator = NodePath("../Elevator2")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Entities/ElevatorNPC" unique_id=581929923]
 y_sort_enabled = true
-position = Vector2(-207.18233, 790.6079)
+position = Vector2(-207.18233, 787.2931)
 progress = 99.99992
 rotates = false
 loop = false

@@ -10,6 +10,7 @@ extends CharacterBody2D
 
 var last_position : Vector2
 var last_direction : String
+var movement
 
 func _pause():
 	moving = false
@@ -25,14 +26,17 @@ func _ready() -> void:
 	last_position = global_position
 	
 func _physics_process(delta: float) -> void:
+	
 	if moving:
 		path_follow.progress += move_speed * delta
+	else: _update_animation(movement) 
 	
-		var movement = global_position - last_position
-		if movement.length() > 0.1: 
-			_update_animation(movement) 
+	movement = global_position - last_position
+	if movement.length() > 0.1: 
+		_update_animation(movement) 
+	
+	last_position = global_position
 		
-		last_position = global_position
 
 func _update_animation(movement: Vector2):
 	if moving:

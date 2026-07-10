@@ -4,6 +4,9 @@ extends StaticBody2D
 @onready var sfx = $AudioStreamPlayer2D
 @onready var level: AnimatedSprite2D = $level
 
+func _ready() -> void:
+	print("READY")
+	print(level)
 
 func open():
 	animation.play("open")
@@ -20,7 +23,7 @@ func close():
 	return
 
 func set_level(_level: int):
-	var _string = str(_level)
+	print("Level changed to " + str(_level))
 	level.play(str(_level))
 	await level.animation_finished
 	return
