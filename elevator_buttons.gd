@@ -24,15 +24,10 @@ func _on_interact():
 	match answer:
 		1: 
 			if can_enter:
-				await enter_elevator()
+				await elevator.open()
 			else:
 				await t.talk("", "You sadly have no reason to go up there.", 0)
 			
 		2: await t.talk("", "Off limits.", 0)
 	
 	return
-
-func enter_elevator():
-	elevator.animation.play("open")
-	await elevator.animation.animation_finished
-	print("entered")

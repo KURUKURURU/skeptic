@@ -20,6 +20,9 @@
 [ext_resource type="PackedScene" uid="uid://cj51xh04d60td" path="res://scene/Entities/smart_npc.tscn" id="15_xd2lx"]
 [ext_resource type="PackedScene" uid="uid://c7yojo2gdldee" path="res://scene/Entities/elevator.tscn" id="16_4xese"]
 [ext_resource type="PackedScene" uid="uid://bpar5gohcmlu2" path="res://scene/Entities/elevator_buttons.tscn" id="17_a5q4k"]
+[ext_resource type="Curve2D" uid="uid://c7wtva2u6luwi" path="res://paths/enter_elevator.tres" id="17_mbim4"]
+[ext_resource type="Script" uid="uid://c4crimqrm4ba8" path="res://scene/tool/elevator_npc.gd" id="18_4q7ge"]
+[ext_resource type="Script" uid="uid://td011bokkoqu" path="res://scene/Entities/controlled_smart_npc.gd" id="19_4q7ge"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hrtff"]
 texture = ExtResource("2_hrtff")
@@ -258,9 +261,9 @@ region = Rect2(255.53073, 124.18088, 42.024216, 61.92286)
 
 [sub_resource type="Curve2D" id="Curve2D_xd2lx"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 593.9227, 1229.2819, 0, 0, 0, 0, 593.9227, 1229.2819, 0, 0, 0, 0, 590.0553, 1088.9504, 0, 0, 0, 0, 539.22656, 1085.083, 0, 0, 0, 0, 541.989, 913.81226, 0, 0, 0, 0, 643.094, 913.81226, 0, 0, 0, 0, 640.88403, 853.03876, 0, 0, 0, 0, 1254.6963, 845.85645)
+"points": PackedVector2Array(0, 0, 0, 0, 593.9227, 1229.2819, 0, 0, 0, 0, 590.0553, 1088.9504, 0, 0, 0, 0, 539.22656, 1085.083, 0, 0, 0, 0, 541.989, 913.81226, 0, 0, 0, 0, 643.094, 913.81226, 0, 0, 0, 0, 640.88403, 853.03876, 0, 0, 0, 0, 1254.6963, 845.85645)
 }
-point_count = 8
+point_count = 7
 
 [node name="TestArea" type="Node2D" unique_id=798318388]
 y_sort_enabled = true
@@ -307,7 +310,7 @@ y_sort_enabled = true
 scale = Vector2(1.81, 1.81)
 
 [node name="Nyra" parent="Entities" unique_id=624278877 instance=ExtResource("3_dl5wq")]
-position = Vector2(504.4199, 920.9945)
+position = Vector2(-150.82874, 823.20447)
 
 [node name="Camera2D" type="Camera2D" parent="Entities/Nyra" unique_id=959529032]
 offset = Vector2(0, -20.915)
@@ -415,16 +418,16 @@ metadata/_scene_painted = true
 [node name="NPC" parent="Entities" unique_id=2085148079 instance=ExtResource("14_yfd60")]
 position = Vector2(496.68512, 1223.7571)
 
-[node name="Path2D" type="Path2D" parent="Entities" unique_id=718482937]
+[node name="RandomNPC" type="Path2D" parent="Entities" unique_id=718482937]
 y_sort_enabled = true
 curve = SubResource("Curve2D_xd2lx")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Entities/Path2D" unique_id=527254806]
+[node name="PathFollow2D" type="PathFollow2D" parent="Entities/RandomNPC" unique_id=527254806]
 y_sort_enabled = true
-position = Vector2(593.9254, 1229.3804)
+position = Vector2(593.9227, 1229.2819)
 rotates = false
 
-[node name="SmartNPC" parent="Entities/Path2D/PathFollow2D" unique_id=1809051609 node_paths=PackedStringArray("path_follow", "path") instance=ExtResource("15_xd2lx")]
+[node name="SmartNPC" parent="Entities/RandomNPC/PathFollow2D" unique_id=1809051609 node_paths=PackedStringArray("path_follow", "path") instance=ExtResource("15_xd2lx")]
 y_sort_enabled = true
 position = Vector2(-4.2915344e-05, -6.1035156e-05)
 scale = Vector2(1.0000001, 1.0000001)
@@ -432,6 +435,29 @@ motion_mode = 1
 path_follow = NodePath("..")
 path = NodePath("../..")
 loop_path = true
+metadata/_scene_painted = true
+
+[node name="ElevatorNPC" type="Path2D" parent="Entities" unique_id=1906268 node_paths=PackedStringArray("elevator")]
+y_sort_enabled = true
+curve = ExtResource("17_mbim4")
+script = ExtResource("18_4q7ge")
+elevator = NodePath("../Elevator2")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Entities/ElevatorNPC" unique_id=581929923]
+y_sort_enabled = true
+position = Vector2(-207.18233, 790.6079)
+progress = 99.99992
+rotates = false
+loop = false
+
+[node name="SmartNPC" parent="Entities/ElevatorNPC/PathFollow2D" unique_id=1876042050 node_paths=PackedStringArray("path_follow", "path") instance=ExtResource("15_xd2lx")]
+y_sort_enabled = true
+position = Vector2(-4.2915344e-05, -6.1035156e-05)
+scale = Vector2(1.0000001, 1.0000001)
+motion_mode = 1
+script = ExtResource("19_4q7ge")
+path_follow = NodePath("..")
+path = NodePath("../..")
 metadata/_scene_painted = true
 
 [node name="ElevatorButtons" parent="Entities" unique_id=1891147331 node_paths=PackedStringArray("elevator") instance=ExtResource("17_a5q4k")]

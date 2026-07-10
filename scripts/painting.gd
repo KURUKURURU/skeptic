@@ -28,7 +28,7 @@ func _on_interact():
 			return
 		3:
 			await t.talk("", "You're on Floor 1.", 0)
-			await t.talk("", "This floor contains conference rooms or large presentation spaces.", 0)
+			await t.talk("", "This floor contains conference rooms and large presentation spaces.", 0)
 			await t.talk("", "So most visitors stay down here.", 0)
 			return
 	

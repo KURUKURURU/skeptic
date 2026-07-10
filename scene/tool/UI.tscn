@@ -1,8 +1,21 @@
 [gd_scene format=3 uid="uid://cjrig12icgn2m"]
 
 [ext_resource type="Texture2D" uid="uid://cr35lo8uul6tq" path="res://img/borders.png" id="1_gkfcp"]
+[ext_resource type="Texture2D" uid="uid://cw5bn0nol0lss" path="res://img/filter.png" id="2_xlnka"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_21hew"]
+blend_mode = 2
 
 [node name="UI" type="CanvasLayer" unique_id=657324367]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=773835106]
+self_modulate = Color(1, 1, 1, 0.62352943)
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_21hew")
+offset_right = 480.0
+offset_bottom = 270.0
+scale = Vector2(4.007802, 4.007802)
+texture = ExtResource("2_xlnka")
 
 [node name="Borders" type="TextureRect" parent="." unique_id=818136265]
 offset_right = 480.0

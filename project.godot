@@ -82,7 +82,7 @@ shift={
 
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="mobile"
-environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+environment/defaults/default_clear_color=Color(0.074852906, 0.034063272, 0.034063272, 1)
 textures/stretch/scale_mode="fractional"
 textures/root_node_auto_translate=true
 textures/size/viewport_height=1080
