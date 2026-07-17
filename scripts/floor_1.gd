@@ -18,6 +18,8 @@ func _ready() -> void:
 		nyra.position.y = 812.707
 		
 		nyra.hide()
+		await Ui.fade(false)
+		
 		await main_elevator.open()
 		await get_tree().create_timer(0.20).timeout
 		

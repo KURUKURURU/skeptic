@@ -20,7 +20,7 @@ position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_q75ou")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=728727981]
-scale = Vector2(1.141, 1.141)
+scale = Vector2(1.176, 1.176)
 sprite_frames = ExtResource("2_q75ou")
 animation = &"down_2"
 offset = Vector2(0, -12.11)

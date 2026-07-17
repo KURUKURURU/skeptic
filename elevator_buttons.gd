@@ -53,6 +53,7 @@ func _on_interact():
 	
 	await elevator.open()
 	await wait(0.5)
+	await Ui.fade(true)
 	get_tree().change_scene_to_file("res://scene/scene/floor_" + str(answer) + ".tscn")
 		
 	return

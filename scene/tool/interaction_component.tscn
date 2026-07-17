@@ -26,6 +26,7 @@ offset_top = 986.625
 offset_right = 1114.2797
 offset_bottom = 1076.6256
 theme = ExtResource("2_vh7tj")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 20
 bbcode_enabled = true
 text = "testing"

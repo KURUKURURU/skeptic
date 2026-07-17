@@ -1,24 +1,93 @@
 [gd_scene format=3 uid="uid://cjrig12icgn2m"]
 
+[ext_resource type="Script" uid="uid://b7npg5v5alb1q" path="res://scene/tool/ui.gd" id="1_73iap"]
 [ext_resource type="Texture2D" uid="uid://cr35lo8uul6tq" path="res://img/borders.png" id="1_gkfcp"]
 [ext_resource type="Texture2D" uid="uid://cw5bn0nol0lss" path="res://img/filter.png" id="2_xlnka"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_21hew"]
-blend_mode = 2
+
+[sub_resource type="Animation" id="Animation_xlnka"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.039215688, 0.023529412, 0.023529412, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_73iap"]
+resource_name = "away"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.039215688, 0.023529412, 0.023529412, 1), Color(0.039215688, 0.023529412, 0.023529412, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_myenu"]
+resource_name = "in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.039215688, 0.023529412, 0.023529412, 0), Color(0.039215688, 0.023529412, 0.023529412, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q7bw5"]
+_data = {
+&"RESET": SubResource("Animation_xlnka"),
+&"away": SubResource("Animation_73iap"),
+&"in": SubResource("Animation_myenu")
+}
 
 [node name="UI" type="CanvasLayer" unique_id=657324367]
+script = ExtResource("1_73iap")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2005018935]
+offset_right = 1928.0
+offset_bottom = 1089.0
+mouse_filter = 2
+color = Color(0.039215688, 0.023529412, 0.023529412, 0)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=773835106]
-self_modulate = Color(1, 1, 1, 0.62352943)
+self_modulate = Color(1, 0.08235294, 1, 0.28235295)
 texture_filter = 1
 material = SubResource("CanvasItemMaterial_21hew")
-offset_right = 480.0
-offset_bottom = 270.0
+offset_left = 722.0
+offset_top = 404.0
+offset_right = 1202.0
+offset_bottom = 674.0
 scale = Vector2(4.007802, 4.007802)
+pivot_offset_ratio = Vector2(0.5, 0.5)
 texture = ExtResource("2_xlnka")
 
 [node name="Borders" type="TextureRect" parent="." unique_id=818136265]
-offset_right = 480.0
-offset_bottom = 270.0
-scale = Vector2(4.014, 4.014)
+offset_left = 722.0
+offset_top = 404.0
+offset_right = 1202.0
+offset_bottom = 674.0
+scale = Vector2(4.007802, 4.007802)
+pivot_offset_ratio = Vector2(0.5, 0.5)
 texture = ExtResource("1_gkfcp")
+
+[node name="animation" type="AnimationPlayer" parent="." unique_id=922365429]
+libraries/ = SubResource("AnimationLibrary_q7bw5")
+speed_scale = 4.0

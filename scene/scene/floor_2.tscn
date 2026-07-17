@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://dpwhgg4w6tq2o" path="res://scene/Entities/security_camera.tscn" id="15_4urub"]
 [ext_resource type="PackedScene" uid="uid://mex3xfsq160u" path="res://scene/Entities/plant.tscn" id="16_otmqu"]
 [ext_resource type="PackedScene" uid="uid://c02j8xi70jfl3" path="res://scene/Entities/table.tscn" id="17_r1vqd"]
+[ext_resource type="PackedScene" uid="uid://dq06jirvt5ies" path="res://scene/Entities/npc.tscn" id="20_otmqu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hrtff"]
 texture = ExtResource("2_8mvi3")
@@ -294,7 +295,7 @@ tile_set = SubResource("TileSet_hrtff")
 [node name="TestingMap3" type="TileMapLayer" parent="TileMapLayers" unique_id=2138354426]
 y_sort_enabled = true
 scale = Vector2(1.7129421, 1.7129421)
-tile_map_data = PackedByteArray("AADz/wwAAwAAAAUAAAD0/wwAAwABAAUAAAD2/wwAAwAAAAUAAAD3/wwAAwABAAUAAADy/w0AAwACAAYAAADy/w4AAwACAAcAAAD4/w0AAwACAAQAAAD4/w4AAwACAAUAAADy/woAAwADAAIAAADy/wsAAwADAAMAAAA=")
+tile_map_data = PackedByteArray("AADz/wwAAwAAAAUAAAD0/wwAAwABAAUAAAD2/wwAAwAAAAUAAAD3/wwAAwABAAUAAADy/w0AAwACAAYAAADy/w4AAwACAAcAAAD4/w0AAwACAAQAAAD4/w4AAwACAAUAAADy/woAAwADAAIAAADy/wsAAwADAAMAAADx/wkAAwAEAAQAAADx/woAAwAEAAUAAADx/wsAAwAEAAYAAAD5/wkAAwAEAAQAAAD5/woAAwAEAAUAAAD5/wsAAwAEAAYAAAD1/wkAAwAEAAQAAAD1/woAAwAEAAUAAAD1/wsAAwAEAAYAAAA=")
 tile_set = SubResource("TileSet_hrtff")
 
 [node name="floor" type="TileMapLayer" parent="TileMapLayers" unique_id=854684315]
@@ -384,7 +385,7 @@ position = Vector2(0, -17.566257)
 texture = SubResource("AtlasTexture_kg0ji")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Entities/talk_alert" unique_id=1186692908]
-position = Vector2(-8.430271e-06, -0.99166965)
+position = Vector2(-8.430271e-06, -3.31485)
 scale = Vector2(0.815403, 0.815403)
 texture = SubResource("AtlasTexture_4urub")
 
@@ -393,7 +394,7 @@ position = Vector2(141.43648, 737.0166)
 player = NodePath("../Nyra")
 
 [node name="SecurityCamera6" parent="Entities" unique_id=1902171764 node_paths=PackedStringArray("player") instance=ExtResource("15_4urub")]
-position = Vector2(-499.44757, 458.01105)
+position = Vector2(-496.68512, 458.01105)
 player = NodePath("../Nyra")
 
 [node name="SecurityCamera2" parent="Entities" unique_id=1472018452 node_paths=PackedStringArray("player") instance=ExtResource("15_4urub")]
@@ -424,32 +425,67 @@ position = Vector2(294.47516, 801.6575)
 [node name="Table" parent="Entities" unique_id=1737978641 instance=ExtResource("17_r1vqd")]
 position = Vector2(334.25415, 803.86743)
 
+[node name="NPC" parent="Entities" unique_id=2085148079 instance=ExtResource("20_otmqu")]
+position = Vector2(-562.64343, 645.33466)
+metadata/_scene_painted = true
+
+[node name="NPC2" parent="Entities" unique_id=1919729025 instance=ExtResource("20_otmqu")]
+position = Vector2(-410.70975, 630.1413)
+metadata/_scene_painted = true
+
+[node name="NPC3" parent="Entities" unique_id=2012778400 instance=ExtResource("20_otmqu")]
+position = Vector2(-447.17386, 721.3015)
+metadata/_scene_painted = true
+
+[node name="NPC4" parent="Entities" unique_id=1872927111 instance=ExtResource("20_otmqu")]
+position = Vector2(-549.88104, 725.5557)
+metadata/_scene_painted = true
+
+[node name="NPC5" parent="Entities" unique_id=1036506492 instance=ExtResource("20_otmqu")]
+position = Vector2(-549.88104, 725.5557)
+metadata/_scene_painted = true
+
+[node name="NPC6" parent="Entities" unique_id=104110872 instance=ExtResource("20_otmqu")]
+position = Vector2(-525.5716, 810.0309)
+metadata/_scene_painted = true
+
+[node name="NPC7" parent="Entities" unique_id=1934236036 instance=ExtResource("20_otmqu")]
+position = Vector2(-490.93073, 682.40656)
+metadata/_scene_painted = true
+
 [node name="Noise" type="Node2D" parent="." unique_id=1785445178]
 
 [node name="Office" type="AudioStreamPlayer2D" parent="Noise" unique_id=97503992]
-position = Vector2(334, 829)
+position = Vector2(634, 635)
 stream = ExtResource("13_brll0")
-volume_db = 10.593
 autoplay = true
+attenuation = 9.849149
+panning_strength = 2.91
 bus = &"bg"
 
 [node name="Office2" type="AudioStreamPlayer2D" parent="Noise" unique_id=1646823280]
-position = Vector2(1576, 924)
+position = Vector2(1234, 350)
 stream = ExtResource("13_brll0")
 volume_db = 10.593
 autoplay = true
+max_distance = 836.0
+attenuation = 5.4641604
+panning_strength = 2.48
 bus = &"bg"
 
 [node name="People" type="AudioStreamPlayer2D" parent="Noise" unique_id=1498093241]
-position = Vector2(1453, 829)
+position = Vector2(-899, 1156)
 stream = ExtResource("14_2lcxm")
 volume_db = 10.593
 autoplay = true
+attenuation = 11.313718
 bus = &"bg"
 
 [node name="People2" type="AudioStreamPlayer2D" parent="Noise" unique_id=1279157305]
-position = Vector2(433, 924)
+position = Vector2(-323, 2225)
 stream = ExtResource("14_2lcxm")
 volume_db = 10.593
 autoplay = true
+attenuation = 5.8563457
+panning_strength = 1.35
 bus = &"bg"

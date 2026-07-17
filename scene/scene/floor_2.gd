@@ -4,6 +4,10 @@ extends Node2D
 @export var main_elevator: StaticBody2D
 
 func _ready() -> void:
+	
+	if Music.lounge.playing:
+		Music.lounge.stop()
+	
 	Global.current_floor = 2
 	nyra.teleport_to_spawn()
 	main_elevator.set_level(Global.current_floor)
@@ -16,6 +20,8 @@ func _ready() -> void:
 		nyra.position.y = 812.707
 		
 		nyra.hide()
+		await Ui.fade(false)
+		
 		await main_elevator.open()
 		await get_tree().create_timer(0.20).timeout
 		

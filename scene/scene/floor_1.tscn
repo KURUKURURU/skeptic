@@ -311,7 +311,7 @@ y_sort_enabled = true
 scale = Vector2(1.81, 1.81)
 
 [node name="Nyra" parent="Entities" unique_id=624278877 node_paths=PackedStringArray("camera") instance=ExtResource("6_t8myt")]
-position = Vector2(-136.46411, 833.1492)
+position = Vector2(317.67957, 833.1492)
 camera = NodePath("Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="Entities/Nyra" unique_id=959529032]
@@ -347,14 +347,10 @@ position = Vector2(680.663, 1207.7349)
 position = Vector2(919.33704, 697.7901)
 
 [node name="puddle" parent="Entities" unique_id=1691734723 instance=ExtResource("10_ibhgh")]
-position = Vector2(603.86743, 1018.23206)
+position = Vector2(615.4696, 1022.0995)
 
 [node name="puddle2" parent="Entities" unique_id=170847982 instance=ExtResource("10_ibhgh")]
 position = Vector2(923.75696, 762.43097)
-
-[node name="puddle3" parent="Entities" unique_id=1005441009 instance=ExtResource("10_ibhgh")]
-position = Vector2(340.88397, 713.81213)
-scale = Vector2(-1, 1)
 
 [node name="talk_alert" parent="Entities" unique_id=1158920270 instance=ExtResource("11_sggiv")]
 position = Vector2(72.92818, 765.19336)
@@ -402,20 +398,8 @@ message = 2
 position = Vector2(1128.7294, 809.94476)
 message = 2
 
-[node name="puddle4" parent="Entities" unique_id=833274941 instance=ExtResource("10_ibhgh")]
-position = Vector2(183.9779, 423.2044)
-metadata/_scene_painted = true
-
-[node name="puddle5" parent="Entities" unique_id=533429661 instance=ExtResource("10_ibhgh")]
-position = Vector2(340.89334, 285.46066)
-metadata/_scene_painted = true
-
-[node name="puddle6" parent="Entities" unique_id=618527664 instance=ExtResource("10_ibhgh")]
-position = Vector2(761.76764, 367.42868)
-metadata/_scene_painted = true
-
 [node name="puddle7" parent="Entities" unique_id=103627306 instance=ExtResource("10_ibhgh")]
-position = Vector2(17.127075, 801.10504)
+position = Vector2(759.6686, 607.7348)
 metadata/_scene_painted = true
 
 [node name="NPC" parent="Entities" unique_id=2085148079 instance=ExtResource("15_d28da")]
